@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "condition_variable": "cpp",
+        "cmath": "cpp"
+    },
+    "cmake.sourceDirectory": "${workspaceFolder}/AsyncTCP-master"
+}

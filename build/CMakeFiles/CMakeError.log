@@ -1,0 +1,791 @@
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/11.2 2022.02/bin/arm-none-eabi-gcc.exe 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+c:/program files (x86)/arm gnu toolchain arm-none-eabi/11.2 2022.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/bin/ld.exe: c:/program files (x86)/arm gnu toolchain arm-none-eabi/11.2 2022.02/bin/../lib/gcc/arm-none-eabi/11.2.1\libc.a(lib_a-exit.o): in function `exit':
+/data/jenkins/workspace/GNU-toolchain/arm-11/src/newlib-cygwin/newlib/libc/stdlib/exit.c:64: undefined reference to `_exit'
+collect2.exe: error: ld returned 1 exit status
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/11.2 2022.02/bin/arm-none-eabi-g++.exe 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+c:/program files (x86)/arm gnu toolchain arm-none-eabi/11.2 2022.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/bin/ld.exe: c:/program files (x86)/arm gnu toolchain arm-none-eabi/11.2 2022.02/bin/../lib/gcc/arm-none-eabi/11.2.1\libc.a(lib_a-exit.o): in function `exit':
+/data/jenkins/workspace/GNU-toolchain/arm-11/src/newlib-cygwin/newlib/libc/stdlib/exit.c:64: undefined reference to `_exit'
+collect2.exe: error: ld returned 1 exit status
+
+
+Detecting C compiler ABI info failed to compile with the following output:
+Change Dir: C:/Users/moham/OneDrive/Documents/Arduino/libraries/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_95b84/fast && C:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\cmTC_95b84.dir\build.make CMakeFiles/cmTC_95b84.dir/build
+mingw32-make[1]: Entering directory 'C:/Users/moham/OneDrive/Documents/Arduino/libraries/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_95b84.dir/CMakeCCompilerABI.c.obj
+C:\PROGRA~2\ARMGNU~1\112202~1.02\bin\AR19DD~1.EXE   -v -o CMakeFiles\cmTC_95b84.dir\CMakeCCompilerABI.c.obj -c "C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCCompilerABI.c"
+Using built-in specs.
+COLLECT_GCC=C:\PROGRA~2\ARMGNU~1\112202~1.02\bin\AR19DD~1.EXE
+Target: arm-none-eabi
+Configured with: /data/jenkins/workspace/GNU-toolchain/arm-11/src/gcc/configure --target=arm-none-eabi --prefix=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/install// --with-gmp=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/host-tools --with-mpfr=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/host-tools --with-mpc=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/host-tools --with-isl=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/host-tools --disable-shared --disable-nls --disable-threads --disable-tls --enable-checking=release --enable-languages=c,c++,fortran --with-newlib --with-multilib-list=aprofile,rmprofile --with-libiconv-prefix=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/host-tools --host=i686-w64-mingw32 --with-pkgversion='GNU Toolchain for the Arm Architecture 11.2-2022.02 (arm-11.16)' --with-bugurl=https://bugs.linaro.org/
+Thread model: single
+Supported LTO compression algorithms: zlib
+gcc version 11.2.1 20220111 (GNU Toolchain for the Arm Architecture 11.2-2022.02 (arm-11.16)) 
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_95b84.dir\CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles\cmTC_95b84.dir\'
+ c:/progra~2/armgnu~1/112202~1.02/bin/../libexec/gcc/arm-none-eabi/11.2.1/cc1.exe -quiet -v -iprefix c:\progra~2\armgnu~1\112202~1.02\bin\../lib/gcc/arm-none-eabi/11.2.1/ -D__USES_INITFINI__ C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles\cmTC_95b84.dir\ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=arm7tdmi -mfloat-abi=soft -marm -mlibarch=armv4t -march=armv4t -version -o C:\Users\moham\AppData\Local\Temp\ccVfMjUu.s
+GNU C17 (GNU Toolchain for the Arm Architecture 11.2-2022.02 (arm-11.16)) version 11.2.1 20220111 (arm-none-eabi)
+	compiled by GNU C version 7.3-win32 20180312, GMP version 6.2.1, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.15-1-g835ea3a-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring nonexistent directory "c:\progra~2\armgnu~1\112202~1.02\bin\../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/sys-include"
+ignoring duplicate directory "c:/progra~2/armgnu~1/112202~1.02/lib/gcc/../../lib/gcc/arm-none-eabi/11.2.1/include"
+ignoring duplicate directory "c:/progra~2/armgnu~1/112202~1.02/lib/gcc/../../lib/gcc/arm-none-eabi/11.2.1/include-fixed"
+ignoring nonexistent directory "c:/progra~2/armgnu~1/112202~1.02/lib/gcc/../../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/sys-include"
+ignoring duplicate directory "c:/progra~2/armgnu~1/112202~1.02/lib/gcc/../../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ c:\progra~2\armgnu~1\112202~1.02\bin\../lib/gcc/arm-none-eabi/11.2.1/include
+ c:\progra~2\armgnu~1\112202~1.02\bin\../lib/gcc/arm-none-eabi/11.2.1/include-fixed
+ c:\progra~2\armgnu~1\112202~1.02\bin\../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/include
+End of search list.
+GNU C17 (GNU Toolchain for the Arm Architecture 11.2-2022.02 (arm-11.16)) version 11.2.1 20220111 (arm-none-eabi)
+	compiled by GNU C version 7.3-win32 20180312, GMP version 6.2.1, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.15-1-g835ea3a-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+Compiler executable checksum: e9130319bd844d450d1dd9151148462d
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_95b84.dir\CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles\cmTC_95b84.dir\'
+ c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/bin/as.exe -march=armv4t -mfloat-abi=soft -meabi=5 -o CMakeFiles\cmTC_95b84.dir\CMakeCCompilerABI.c.obj C:\Users\moham\AppData\Local\Temp\ccVfMjUu.s
+COMPILER_PATH=c:/progra~2/armgnu~1/112202~1.02/bin/../libexec/gcc/arm-none-eabi/11.2.1/;c:/progra~2/armgnu~1/112202~1.02/bin/../libexec/gcc/;c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/bin/
+LIBRARY_PATH=c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/;c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/;c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_95b84.dir\CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles\cmTC_95b84.dir\CMakeCCompilerABI.c.'
+Linking C executable cmTC_95b84.exe
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_95b84.dir\link.txt --verbose=1
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\cmTC_95b84.dir/objects.a
+C:\PROGRA~2\ARMGNU~1\112202~1.02\bin\ARM-NO~2.EXE qc CMakeFiles\cmTC_95b84.dir/objects.a @CMakeFiles\cmTC_95b84.dir\objects1.rsp
+C:\PROGRA~2\ARMGNU~1\112202~1.02\bin\AR19DD~1.EXE  -v -Wl,--whole-archive CMakeFiles\cmTC_95b84.dir/objects.a -Wl,--no-whole-archive -o cmTC_95b84.exe -Wl,--out-implib,libcmTC_95b84.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
+Using built-in specs.
+COLLECT_GCC=C:\PROGRA~2\ARMGNU~1\112202~1.02\bin\AR19DD~1.EXE
+COLLECT_LTO_WRAPPER=c:/progra~2/armgnu~1/112202~1.02/bin/../libexec/gcc/arm-none-eabi/11.2.1/lto-wrapper.exe
+Target: arm-none-eabi
+Configured with: /data/jenkins/workspace/GNU-toolchain/arm-11/src/gcc/configure --target=arm-none-eabi --prefix=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/install// --with-gmp=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/host-tools --with-mpfr=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/host-tools --with-mpc=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/host-tools --with-isl=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/host-tools --disable-shared --disable-nls --disable-threads --disable-tls --enable-checking=release --enable-languages=c,c++,fortran --with-newlib --with-multilib-list=aprofile,rmprofile --with-libiconv-prefix=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/host-tools --host=i686-w64-mingw32 --with-pkgversion='GNU Toolchain for the Arm Architecture 11.2-2022.02 (arm-11.16)' --with-bugurl=https://bugs.linaro.org/
+Thread model: single
+Supported LTO compression algorithms: zlib
+gcc version 11.2.1 20220111 (GNU Toolchain for the Arm Architecture 11.2-2022.02 (arm-11.16)) 
+COMPILER_PATH=c:/progra~2/armgnu~1/112202~1.02/bin/../libexec/gcc/arm-none-eabi/11.2.1/;c:/progra~2/armgnu~1/112202~1.02/bin/../libexec/gcc/;c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/bin/
+LIBRARY_PATH=c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/;c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/;c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_95b84.exe' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'cmTC_95b84.'
+ c:/progra~2/armgnu~1/112202~1.02/bin/../libexec/gcc/arm-none-eabi/11.2.1/collect2.exe -plugin c:/progra~2/armgnu~1/112202~1.02/bin/../libexec/gcc/arm-none-eabi/11.2.1/liblto_plugin.dll -plugin-opt=c:/progra~2/armgnu~1/112202~1.02/bin/../libexec/gcc/arm-none-eabi/11.2.1/lto-wrapper.exe -plugin-opt=-fresolution=C:\Users\moham\AppData\Local\Temp\ccJPXhBc.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -X -o cmTC_95b84.exe c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/crti.o c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/crtbegin.o c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/crt0.o -Lc:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1 -Lc:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc -Lc:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/lib --whole-archive CMakeFiles\cmTC_95b84.dir/objects.a --no-whole-archive --out-implib libcmTC_95b84.dll.a --major-image-version 0 --minor-image-version 0 --start-group -lgcc -lc --end-group c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/crtend.o c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/crtn.o
+c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/bin/ld.exe: unrecognized option '--major-image-version'
+c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/bin/ld.exe: use the --help option for usage information
+collect2.exe: error: ld returned 1 exit status
+mingw32-make[1]: *** [CMakeFiles\cmTC_95b84.dir\build.make:99: cmTC_95b84.exe] Error 1
+mingw32-make[1]: Leaving directory 'C:/Users/moham/OneDrive/Documents/Arduino/libraries/build/CMakeFiles/CMakeTmp'
+mingw32-make: *** [Makefile:126: cmTC_95b84/fast] Error 2
+
+
+
+
+Determining if the C compiler works failed with the following output:
+Change Dir: C:/Users/moham/OneDrive/Documents/Arduino/libraries/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_124bb/fast && C:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\cmTC_124bb.dir\build.make CMakeFiles/cmTC_124bb.dir/build
+mingw32-make[1]: Entering directory 'C:/Users/moham/OneDrive/Documents/Arduino/libraries/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_124bb.dir/testCCompiler.c.obj
+C:\PROGRA~2\ARMGNU~1\112202~1.02\bin\AR19DD~1.EXE    -o CMakeFiles\cmTC_124bb.dir\testCCompiler.c.obj -c C:\Users\moham\OneDrive\Documents\Arduino\libraries\build\CMakeFiles\CMakeTmp\testCCompiler.c
+Linking C executable cmTC_124bb.exe
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_124bb.dir\link.txt --verbose=1
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\cmTC_124bb.dir/objects.a
+C:\PROGRA~2\ARMGNU~1\112202~1.02\bin\ARM-NO~2.EXE qc CMakeFiles\cmTC_124bb.dir/objects.a @CMakeFiles\cmTC_124bb.dir\objects1.rsp
+C:\PROGRA~2\ARMGNU~1\112202~1.02\bin\AR19DD~1.EXE -Wl,--whole-archive CMakeFiles\cmTC_124bb.dir/objects.a -Wl,--no-whole-archive -o cmTC_124bb.exe -Wl,--out-implib,libcmTC_124bb.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_124bb.dir\linklibs.rsp
+c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/bin/ld.exe: unrecognized option '--major-image-version'
+c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/bin/ld.exe: use the --help option for usage information
+collect2.exe: error: ld returned 1 exit status
+mingw32-make[1]: *** [CMakeFiles\cmTC_124bb.dir\build.make:100: cmTC_124bb.exe] Error 1
+mingw32-make[1]: Leaving directory 'C:/Users/moham/OneDrive/Documents/Arduino/libraries/build/CMakeFiles/CMakeTmp'
+mingw32-make: *** [Makefile:126: cmTC_124bb/fast] Error 2
+
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/11.2 2022.02/bin/arm-none-eabi-gcc.exe 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+c:/program files (x86)/arm gnu toolchain arm-none-eabi/11.2 2022.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/bin/ld.exe: c:/program files (x86)/arm gnu toolchain arm-none-eabi/11.2 2022.02/bin/../lib/gcc/arm-none-eabi/11.2.1\libc.a(lib_a-exit.o): in function `exit':
+/data/jenkins/workspace/GNU-toolchain/arm-11/src/newlib-cygwin/newlib/libc/stdlib/exit.c:64: undefined reference to `_exit'
+collect2.exe: error: ld returned 1 exit status
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/11.2 2022.02/bin/arm-none-eabi-g++.exe 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+c:/program files (x86)/arm gnu toolchain arm-none-eabi/11.2 2022.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/bin/ld.exe: c:/program files (x86)/arm gnu toolchain arm-none-eabi/11.2 2022.02/bin/../lib/gcc/arm-none-eabi/11.2.1\libc.a(lib_a-exit.o): in function `exit':
+/data/jenkins/workspace/GNU-toolchain/arm-11/src/newlib-cygwin/newlib/libc/stdlib/exit.c:64: undefined reference to `_exit'
+collect2.exe: error: ld returned 1 exit status
+
+
+Detecting C compiler ABI info failed to compile with the following output:
+Change Dir: C:/Users/moham/OneDrive/Documents/Arduino/libraries/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_d4a5f/fast && C:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\cmTC_d4a5f.dir\build.make CMakeFiles/cmTC_d4a5f.dir/build
+mingw32-make[1]: Entering directory 'C:/Users/moham/OneDrive/Documents/Arduino/libraries/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d4a5f.dir/CMakeCCompilerABI.c.obj
+C:\PROGRA~2\ARMGNU~1\112202~1.02\bin\AR19DD~1.EXE   -v -o CMakeFiles\cmTC_d4a5f.dir\CMakeCCompilerABI.c.obj -c "C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCCompilerABI.c"
+Using built-in specs.
+COLLECT_GCC=C:\PROGRA~2\ARMGNU~1\112202~1.02\bin\AR19DD~1.EXE
+Target: arm-none-eabi
+Configured with: /data/jenkins/workspace/GNU-toolchain/arm-11/src/gcc/configure --target=arm-none-eabi --prefix=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/install// --with-gmp=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/host-tools --with-mpfr=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/host-tools --with-mpc=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/host-tools --with-isl=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/host-tools --disable-shared --disable-nls --disable-threads --disable-tls --enable-checking=release --enable-languages=c,c++,fortran --with-newlib --with-multilib-list=aprofile,rmprofile --with-libiconv-prefix=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/host-tools --host=i686-w64-mingw32 --with-pkgversion='GNU Toolchain for the Arm Architecture 11.2-2022.02 (arm-11.16)' --with-bugurl=https://bugs.linaro.org/
+Thread model: single
+Supported LTO compression algorithms: zlib
+gcc version 11.2.1 20220111 (GNU Toolchain for the Arm Architecture 11.2-2022.02 (arm-11.16)) 
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_d4a5f.dir\CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles\cmTC_d4a5f.dir\'
+ c:/progra~2/armgnu~1/112202~1.02/bin/../libexec/gcc/arm-none-eabi/11.2.1/cc1.exe -quiet -v -iprefix c:\progra~2\armgnu~1\112202~1.02\bin\../lib/gcc/arm-none-eabi/11.2.1/ -D__USES_INITFINI__ C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles\cmTC_d4a5f.dir\ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=arm7tdmi -mfloat-abi=soft -marm -mlibarch=armv4t -march=armv4t -version -o C:\Users\moham\AppData\Local\Temp\ccs41l6Z.s
+GNU C17 (GNU Toolchain for the Arm Architecture 11.2-2022.02 (arm-11.16)) version 11.2.1 20220111 (arm-none-eabi)
+	compiled by GNU C version 7.3-win32 20180312, GMP version 6.2.1, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.15-1-g835ea3a-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring nonexistent directory "c:\progra~2\armgnu~1\112202~1.02\bin\../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/sys-include"
+ignoring duplicate directory "c:/progra~2/armgnu~1/112202~1.02/lib/gcc/../../lib/gcc/arm-none-eabi/11.2.1/include"
+ignoring duplicate directory "c:/progra~2/armgnu~1/112202~1.02/lib/gcc/../../lib/gcc/arm-none-eabi/11.2.1/include-fixed"
+ignoring nonexistent directory "c:/progra~2/armgnu~1/112202~1.02/lib/gcc/../../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/sys-include"
+ignoring duplicate directory "c:/progra~2/armgnu~1/112202~1.02/lib/gcc/../../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ c:\progra~2\armgnu~1\112202~1.02\bin\../lib/gcc/arm-none-eabi/11.2.1/include
+ c:\progra~2\armgnu~1\112202~1.02\bin\../lib/gcc/arm-none-eabi/11.2.1/include-fixed
+ c:\progra~2\armgnu~1\112202~1.02\bin\../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/include
+End of search list.
+GNU C17 (GNU Toolchain for the Arm Architecture 11.2-2022.02 (arm-11.16)) version 11.2.1 20220111 (arm-none-eabi)
+	compiled by GNU C version 7.3-win32 20180312, GMP version 6.2.1, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.15-1-g835ea3a-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+Compiler executable checksum: e9130319bd844d450d1dd9151148462d
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_d4a5f.dir\CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles\cmTC_d4a5f.dir\'
+ c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/bin/as.exe -march=armv4t -mfloat-abi=soft -meabi=5 -o CMakeFiles\cmTC_d4a5f.dir\CMakeCCompilerABI.c.obj C:\Users\moham\AppData\Local\Temp\ccs41l6Z.s
+COMPILER_PATH=c:/progra~2/armgnu~1/112202~1.02/bin/../libexec/gcc/arm-none-eabi/11.2.1/;c:/progra~2/armgnu~1/112202~1.02/bin/../libexec/gcc/;c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/bin/
+LIBRARY_PATH=c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/;c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/;c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_d4a5f.dir\CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles\cmTC_d4a5f.dir\CMakeCCompilerABI.c.'
+Linking C executable cmTC_d4a5f.exe
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_d4a5f.dir\link.txt --verbose=1
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\cmTC_d4a5f.dir/objects.a
+C:\PROGRA~2\ARMGNU~1\112202~1.02\bin\ARM-NO~2.EXE qc CMakeFiles\cmTC_d4a5f.dir/objects.a @CMakeFiles\cmTC_d4a5f.dir\objects1.rsp
+C:\PROGRA~2\ARMGNU~1\112202~1.02\bin\AR19DD~1.EXE  -v -Wl,--whole-archive CMakeFiles\cmTC_d4a5f.dir/objects.a -Wl,--no-whole-archive -o cmTC_d4a5f.exe -Wl,--out-implib,libcmTC_d4a5f.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
+Using built-in specs.
+COLLECT_GCC=C:\PROGRA~2\ARMGNU~1\112202~1.02\bin\AR19DD~1.EXE
+COLLECT_LTO_WRAPPER=c:/progra~2/armgnu~1/112202~1.02/bin/../libexec/gcc/arm-none-eabi/11.2.1/lto-wrapper.exe
+Target: arm-none-eabi
+Configured with: /data/jenkins/workspace/GNU-toolchain/arm-11/src/gcc/configure --target=arm-none-eabi --prefix=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/install// --with-gmp=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/host-tools --with-mpfr=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/host-tools --with-mpc=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/host-tools --with-isl=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/host-tools --disable-shared --disable-nls --disable-threads --disable-tls --enable-checking=release --enable-languages=c,c++,fortran --with-newlib --with-multilib-list=aprofile,rmprofile --with-libiconv-prefix=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/host-tools --host=i686-w64-mingw32 --with-pkgversion='GNU Toolchain for the Arm Architecture 11.2-2022.02 (arm-11.16)' --with-bugurl=https://bugs.linaro.org/
+Thread model: single
+Supported LTO compression algorithms: zlib
+gcc version 11.2.1 20220111 (GNU Toolchain for the Arm Architecture 11.2-2022.02 (arm-11.16)) 
+COMPILER_PATH=c:/progra~2/armgnu~1/112202~1.02/bin/../libexec/gcc/arm-none-eabi/11.2.1/;c:/progra~2/armgnu~1/112202~1.02/bin/../libexec/gcc/;c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/bin/
+LIBRARY_PATH=c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/;c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/;c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_d4a5f.exe' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'cmTC_d4a5f.'
+ c:/progra~2/armgnu~1/112202~1.02/bin/../libexec/gcc/arm-none-eabi/11.2.1/collect2.exe -plugin c:/progra~2/armgnu~1/112202~1.02/bin/../libexec/gcc/arm-none-eabi/11.2.1/liblto_plugin.dll -plugin-opt=c:/progra~2/armgnu~1/112202~1.02/bin/../libexec/gcc/arm-none-eabi/11.2.1/lto-wrapper.exe -plugin-opt=-fresolution=C:\Users\moham\AppData\Local\Temp\ccH1o4yw.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -X -o cmTC_d4a5f.exe c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/crti.o c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/crtbegin.o c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/crt0.o -Lc:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1 -Lc:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc -Lc:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/lib --whole-archive CMakeFiles\cmTC_d4a5f.dir/objects.a --no-whole-archive --out-implib libcmTC_d4a5f.dll.a --major-image-version 0 --minor-image-version 0 --start-group -lgcc -lc --end-group c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/crtend.o c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/crtn.o
+c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/bin/ld.exe: unrecognized option '--major-image-version'
+c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/bin/ld.exe: use the --help option for usage information
+collect2.exe: error: ld returned 1 exit status
+mingw32-make[1]: *** [CMakeFiles\cmTC_d4a5f.dir\build.make:99: cmTC_d4a5f.exe] Error 1
+mingw32-make[1]: Leaving directory 'C:/Users/moham/OneDrive/Documents/Arduino/libraries/build/CMakeFiles/CMakeTmp'
+mingw32-make: *** [Makefile:126: cmTC_d4a5f/fast] Error 2
+
+
+
+
+Determining if the C compiler works failed with the following output:
+Change Dir: C:/Users/moham/OneDrive/Documents/Arduino/libraries/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_9f481/fast && C:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\cmTC_9f481.dir\build.make CMakeFiles/cmTC_9f481.dir/build
+mingw32-make[1]: Entering directory 'C:/Users/moham/OneDrive/Documents/Arduino/libraries/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9f481.dir/testCCompiler.c.obj
+C:\PROGRA~2\ARMGNU~1\112202~1.02\bin\AR19DD~1.EXE    -o CMakeFiles\cmTC_9f481.dir\testCCompiler.c.obj -c C:\Users\moham\OneDrive\Documents\Arduino\libraries\build\CMakeFiles\CMakeTmp\testCCompiler.c
+Linking C executable cmTC_9f481.exe
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_9f481.dir\link.txt --verbose=1
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\cmTC_9f481.dir/objects.a
+C:\PROGRA~2\ARMGNU~1\112202~1.02\bin\ARM-NO~2.EXE qc CMakeFiles\cmTC_9f481.dir/objects.a @CMakeFiles\cmTC_9f481.dir\objects1.rsp
+C:\PROGRA~2\ARMGNU~1\112202~1.02\bin\AR19DD~1.EXE -Wl,--whole-archive CMakeFiles\cmTC_9f481.dir/objects.a -Wl,--no-whole-archive -o cmTC_9f481.exe -Wl,--out-implib,libcmTC_9f481.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_9f481.dir\linklibs.rsp
+c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/bin/ld.exe: unrecognized option '--major-image-version'
+c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/bin/ld.exe: use the --help option for usage information
+collect2.exe: error: ld returned 1 exit status
+mingw32-make[1]: *** [CMakeFiles\cmTC_9f481.dir\build.make:100: cmTC_9f481.exe] Error 1
+mingw32-make[1]: Leaving directory 'C:/Users/moham/OneDrive/Documents/Arduino/libraries/build/CMakeFiles/CMakeTmp'
+mingw32-make: *** [Makefile:126: cmTC_9f481/fast] Error 2
+
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/11.2 2022.02/bin/arm-none-eabi-gcc.exe 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+c:/program files (x86)/arm gnu toolchain arm-none-eabi/11.2 2022.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/bin/ld.exe: c:/program files (x86)/arm gnu toolchain arm-none-eabi/11.2 2022.02/bin/../lib/gcc/arm-none-eabi/11.2.1\libc.a(lib_a-exit.o): in function `exit':
+/data/jenkins/workspace/GNU-toolchain/arm-11/src/newlib-cygwin/newlib/libc/stdlib/exit.c:64: undefined reference to `_exit'
+collect2.exe: error: ld returned 1 exit status
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/11.2 2022.02/bin/arm-none-eabi-g++.exe 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+c:/program files (x86)/arm gnu toolchain arm-none-eabi/11.2 2022.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/bin/ld.exe: c:/program files (x86)/arm gnu toolchain arm-none-eabi/11.2 2022.02/bin/../lib/gcc/arm-none-eabi/11.2.1\libc.a(lib_a-exit.o): in function `exit':
+/data/jenkins/workspace/GNU-toolchain/arm-11/src/newlib-cygwin/newlib/libc/stdlib/exit.c:64: undefined reference to `_exit'
+collect2.exe: error: ld returned 1 exit status
+
+
+Detecting C compiler ABI info failed to compile with the following output:
+Change Dir: C:/Users/moham/OneDrive/Documents/Arduino/libraries/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_a2186/fast && C:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\cmTC_a2186.dir\build.make CMakeFiles/cmTC_a2186.dir/build
+mingw32-make[1]: Entering directory 'C:/Users/moham/OneDrive/Documents/Arduino/libraries/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a2186.dir/CMakeCCompilerABI.c.obj
+C:\PROGRA~2\ARMGNU~1\112202~1.02\bin\AR19DD~1.EXE   -v -o CMakeFiles\cmTC_a2186.dir\CMakeCCompilerABI.c.obj -c "C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCCompilerABI.c"
+Using built-in specs.
+COLLECT_GCC=C:\PROGRA~2\ARMGNU~1\112202~1.02\bin\AR19DD~1.EXE
+Target: arm-none-eabi
+Configured with: /data/jenkins/workspace/GNU-toolchain/arm-11/src/gcc/configure --target=arm-none-eabi --prefix=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/install// --with-gmp=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/host-tools --with-mpfr=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/host-tools --with-mpc=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/host-tools --with-isl=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/host-tools --disable-shared --disable-nls --disable-threads --disable-tls --enable-checking=release --enable-languages=c,c++,fortran --with-newlib --with-multilib-list=aprofile,rmprofile --with-libiconv-prefix=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/host-tools --host=i686-w64-mingw32 --with-pkgversion='GNU Toolchain for the Arm Architecture 11.2-2022.02 (arm-11.16)' --with-bugurl=https://bugs.linaro.org/
+Thread model: single
+Supported LTO compression algorithms: zlib
+gcc version 11.2.1 20220111 (GNU Toolchain for the Arm Architecture 11.2-2022.02 (arm-11.16)) 
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_a2186.dir\CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles\cmTC_a2186.dir\'
+ c:/progra~2/armgnu~1/112202~1.02/bin/../libexec/gcc/arm-none-eabi/11.2.1/cc1.exe -quiet -v -iprefix c:\progra~2\armgnu~1\112202~1.02\bin\../lib/gcc/arm-none-eabi/11.2.1/ -D__USES_INITFINI__ C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles\cmTC_a2186.dir\ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=arm7tdmi -mfloat-abi=soft -marm -mlibarch=armv4t -march=armv4t -version -o C:\Users\moham\AppData\Local\Temp\ccjDPhUZ.s
+GNU C17 (GNU Toolchain for the Arm Architecture 11.2-2022.02 (arm-11.16)) version 11.2.1 20220111 (arm-none-eabi)
+	compiled by GNU C version 7.3-win32 20180312, GMP version 6.2.1, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.15-1-g835ea3a-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring nonexistent directory "c:\progra~2\armgnu~1\112202~1.02\bin\../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/sys-include"
+ignoring duplicate directory "c:/progra~2/armgnu~1/112202~1.02/lib/gcc/../../lib/gcc/arm-none-eabi/11.2.1/include"
+ignoring duplicate directory "c:/progra~2/armgnu~1/112202~1.02/lib/gcc/../../lib/gcc/arm-none-eabi/11.2.1/include-fixed"
+ignoring nonexistent directory "c:/progra~2/armgnu~1/112202~1.02/lib/gcc/../../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/sys-include"
+ignoring duplicate directory "c:/progra~2/armgnu~1/112202~1.02/lib/gcc/../../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ c:\progra~2\armgnu~1\112202~1.02\bin\../lib/gcc/arm-none-eabi/11.2.1/include
+ c:\progra~2\armgnu~1\112202~1.02\bin\../lib/gcc/arm-none-eabi/11.2.1/include-fixed
+ c:\progra~2\armgnu~1\112202~1.02\bin\../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/include
+End of search list.
+GNU C17 (GNU Toolchain for the Arm Architecture 11.2-2022.02 (arm-11.16)) version 11.2.1 20220111 (arm-none-eabi)
+	compiled by GNU C version 7.3-win32 20180312, GMP version 6.2.1, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.15-1-g835ea3a-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+Compiler executable checksum: e9130319bd844d450d1dd9151148462d
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_a2186.dir\CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles\cmTC_a2186.dir\'
+ c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/bin/as.exe -march=armv4t -mfloat-abi=soft -meabi=5 -o CMakeFiles\cmTC_a2186.dir\CMakeCCompilerABI.c.obj C:\Users\moham\AppData\Local\Temp\ccjDPhUZ.s
+COMPILER_PATH=c:/progra~2/armgnu~1/112202~1.02/bin/../libexec/gcc/arm-none-eabi/11.2.1/;c:/progra~2/armgnu~1/112202~1.02/bin/../libexec/gcc/;c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/bin/
+LIBRARY_PATH=c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/;c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/;c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_a2186.dir\CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles\cmTC_a2186.dir\CMakeCCompilerABI.c.'
+Linking C executable cmTC_a2186.exe
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_a2186.dir\link.txt --verbose=1
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\cmTC_a2186.dir/objects.a
+C:\PROGRA~2\ARMGNU~1\112202~1.02\bin\ARM-NO~2.EXE qc CMakeFiles\cmTC_a2186.dir/objects.a @CMakeFiles\cmTC_a2186.dir\objects1.rsp
+C:\PROGRA~2\ARMGNU~1\112202~1.02\bin\AR19DD~1.EXE  -v -Wl,--whole-archive CMakeFiles\cmTC_a2186.dir/objects.a -Wl,--no-whole-archive -o cmTC_a2186.exe -Wl,--out-implib,libcmTC_a2186.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
+Using built-in specs.
+COLLECT_GCC=C:\PROGRA~2\ARMGNU~1\112202~1.02\bin\AR19DD~1.EXE
+COLLECT_LTO_WRAPPER=c:/progra~2/armgnu~1/112202~1.02/bin/../libexec/gcc/arm-none-eabi/11.2.1/lto-wrapper.exe
+Target: arm-none-eabi
+Configured with: /data/jenkins/workspace/GNU-toolchain/arm-11/src/gcc/configure --target=arm-none-eabi --prefix=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/install// --with-gmp=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/host-tools --with-mpfr=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/host-tools --with-mpc=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/host-tools --with-isl=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/host-tools --disable-shared --disable-nls --disable-threads --disable-tls --enable-checking=release --enable-languages=c,c++,fortran --with-newlib --with-multilib-list=aprofile,rmprofile --with-libiconv-prefix=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/host-tools --host=i686-w64-mingw32 --with-pkgversion='GNU Toolchain for the Arm Architecture 11.2-2022.02 (arm-11.16)' --with-bugurl=https://bugs.linaro.org/
+Thread model: single
+Supported LTO compression algorithms: zlib
+gcc version 11.2.1 20220111 (GNU Toolchain for the Arm Architecture 11.2-2022.02 (arm-11.16)) 
+COMPILER_PATH=c:/progra~2/armgnu~1/112202~1.02/bin/../libexec/gcc/arm-none-eabi/11.2.1/;c:/progra~2/armgnu~1/112202~1.02/bin/../libexec/gcc/;c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/bin/
+LIBRARY_PATH=c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/;c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/;c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a2186.exe' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'cmTC_a2186.'
+ c:/progra~2/armgnu~1/112202~1.02/bin/../libexec/gcc/arm-none-eabi/11.2.1/collect2.exe -plugin c:/progra~2/armgnu~1/112202~1.02/bin/../libexec/gcc/arm-none-eabi/11.2.1/liblto_plugin.dll -plugin-opt=c:/progra~2/armgnu~1/112202~1.02/bin/../libexec/gcc/arm-none-eabi/11.2.1/lto-wrapper.exe -plugin-opt=-fresolution=C:\Users\moham\AppData\Local\Temp\ccoXMB7p.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -X -o cmTC_a2186.exe c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/crti.o c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/crtbegin.o c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/crt0.o -Lc:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1 -Lc:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc -Lc:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/lib --whole-archive CMakeFiles\cmTC_a2186.dir/objects.a --no-whole-archive --out-implib libcmTC_a2186.dll.a --major-image-version 0 --minor-image-version 0 --start-group -lgcc -lc --end-group c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/crtend.o c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/crtn.o
+c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/bin/ld.exe: unrecognized option '--major-image-version'
+c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/bin/ld.exe: use the --help option for usage information
+collect2.exe: error: ld returned 1 exit status
+mingw32-make[1]: *** [CMakeFiles\cmTC_a2186.dir\build.make:99: cmTC_a2186.exe] Error 1
+mingw32-make[1]: Leaving directory 'C:/Users/moham/OneDrive/Documents/Arduino/libraries/build/CMakeFiles/CMakeTmp'
+mingw32-make: *** [Makefile:126: cmTC_a2186/fast] Error 2
+
+
+
+
+Determining if the C compiler works failed with the following output:
+Change Dir: C:/Users/moham/OneDrive/Documents/Arduino/libraries/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_9301a/fast && C:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\cmTC_9301a.dir\build.make CMakeFiles/cmTC_9301a.dir/build
+mingw32-make[1]: Entering directory 'C:/Users/moham/OneDrive/Documents/Arduino/libraries/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9301a.dir/testCCompiler.c.obj
+C:\PROGRA~2\ARMGNU~1\112202~1.02\bin\AR19DD~1.EXE    -o CMakeFiles\cmTC_9301a.dir\testCCompiler.c.obj -c C:\Users\moham\OneDrive\Documents\Arduino\libraries\build\CMakeFiles\CMakeTmp\testCCompiler.c
+Linking C executable cmTC_9301a.exe
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_9301a.dir\link.txt --verbose=1
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\cmTC_9301a.dir/objects.a
+C:\PROGRA~2\ARMGNU~1\112202~1.02\bin\ARM-NO~2.EXE qc CMakeFiles\cmTC_9301a.dir/objects.a @CMakeFiles\cmTC_9301a.dir\objects1.rsp
+C:\PROGRA~2\ARMGNU~1\112202~1.02\bin\AR19DD~1.EXE -Wl,--whole-archive CMakeFiles\cmTC_9301a.dir/objects.a -Wl,--no-whole-archive -o cmTC_9301a.exe -Wl,--out-implib,libcmTC_9301a.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_9301a.dir\linklibs.rsp
+c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/bin/ld.exe: unrecognized option '--major-image-version'
+c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/bin/ld.exe: use the --help option for usage information
+collect2.exe: error: ld returned 1 exit status
+mingw32-make[1]: *** [CMakeFiles\cmTC_9301a.dir\build.make:100: cmTC_9301a.exe] Error 1
+mingw32-make[1]: Leaving directory 'C:/Users/moham/OneDrive/Documents/Arduino/libraries/build/CMakeFiles/CMakeTmp'
+mingw32-make: *** [Makefile:126: cmTC_9301a/fast] Error 2
+
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/11.2 2022.02/bin/arm-none-eabi-gcc.exe 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+c:/program files (x86)/arm gnu toolchain arm-none-eabi/11.2 2022.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/bin/ld.exe: c:/program files (x86)/arm gnu toolchain arm-none-eabi/11.2 2022.02/bin/../lib/gcc/arm-none-eabi/11.2.1\libc.a(lib_a-exit.o): in function `exit':
+/data/jenkins/workspace/GNU-toolchain/arm-11/src/newlib-cygwin/newlib/libc/stdlib/exit.c:64: undefined reference to `_exit'
+collect2.exe: error: ld returned 1 exit status
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/11.2 2022.02/bin/arm-none-eabi-g++.exe 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+c:/program files (x86)/arm gnu toolchain arm-none-eabi/11.2 2022.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/bin/ld.exe: c:/program files (x86)/arm gnu toolchain arm-none-eabi/11.2 2022.02/bin/../lib/gcc/arm-none-eabi/11.2.1\libc.a(lib_a-exit.o): in function `exit':
+/data/jenkins/workspace/GNU-toolchain/arm-11/src/newlib-cygwin/newlib/libc/stdlib/exit.c:64: undefined reference to `_exit'
+collect2.exe: error: ld returned 1 exit status
+
+
+Detecting C compiler ABI info failed to compile with the following output:
+Change Dir: C:/Users/moham/OneDrive/Documents/Arduino/libraries/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_8aa2e/fast && C:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\cmTC_8aa2e.dir\build.make CMakeFiles/cmTC_8aa2e.dir/build
+mingw32-make[1]: Entering directory 'C:/Users/moham/OneDrive/Documents/Arduino/libraries/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8aa2e.dir/CMakeCCompilerABI.c.obj
+C:\PROGRA~2\ARMGNU~1\112202~1.02\bin\AR19DD~1.EXE   -v -o CMakeFiles\cmTC_8aa2e.dir\CMakeCCompilerABI.c.obj -c "C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCCompilerABI.c"
+Using built-in specs.
+COLLECT_GCC=C:\PROGRA~2\ARMGNU~1\112202~1.02\bin\AR19DD~1.EXE
+Target: arm-none-eabi
+Configured with: /data/jenkins/workspace/GNU-toolchain/arm-11/src/gcc/configure --target=arm-none-eabi --prefix=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/install// --with-gmp=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/host-tools --with-mpfr=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/host-tools --with-mpc=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/host-tools --with-isl=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/host-tools --disable-shared --disable-nls --disable-threads --disable-tls --enable-checking=release --enable-languages=c,c++,fortran --with-newlib --with-multilib-list=aprofile,rmprofile --with-libiconv-prefix=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/host-tools --host=i686-w64-mingw32 --with-pkgversion='GNU Toolchain for the Arm Architecture 11.2-2022.02 (arm-11.16)' --with-bugurl=https://bugs.linaro.org/
+Thread model: single
+Supported LTO compression algorithms: zlib
+gcc version 11.2.1 20220111 (GNU Toolchain for the Arm Architecture 11.2-2022.02 (arm-11.16)) 
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_8aa2e.dir\CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles\cmTC_8aa2e.dir\'
+ c:/progra~2/armgnu~1/112202~1.02/bin/../libexec/gcc/arm-none-eabi/11.2.1/cc1.exe -quiet -v -iprefix c:\progra~2\armgnu~1\112202~1.02\bin\../lib/gcc/arm-none-eabi/11.2.1/ -D__USES_INITFINI__ C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles\cmTC_8aa2e.dir\ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=arm7tdmi -mfloat-abi=soft -marm -mlibarch=armv4t -march=armv4t -version -o C:\Users\moham\AppData\Local\Temp\ccIb5K29.s
+GNU C17 (GNU Toolchain for the Arm Architecture 11.2-2022.02 (arm-11.16)) version 11.2.1 20220111 (arm-none-eabi)
+	compiled by GNU C version 7.3-win32 20180312, GMP version 6.2.1, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.15-1-g835ea3a-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring nonexistent directory "c:\progra~2\armgnu~1\112202~1.02\bin\../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/sys-include"
+ignoring duplicate directory "c:/progra~2/armgnu~1/112202~1.02/lib/gcc/../../lib/gcc/arm-none-eabi/11.2.1/include"
+ignoring duplicate directory "c:/progra~2/armgnu~1/112202~1.02/lib/gcc/../../lib/gcc/arm-none-eabi/11.2.1/include-fixed"
+ignoring nonexistent directory "c:/progra~2/armgnu~1/112202~1.02/lib/gcc/../../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/sys-include"
+ignoring duplicate directory "c:/progra~2/armgnu~1/112202~1.02/lib/gcc/../../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ c:\progra~2\armgnu~1\112202~1.02\bin\../lib/gcc/arm-none-eabi/11.2.1/include
+ c:\progra~2\armgnu~1\112202~1.02\bin\../lib/gcc/arm-none-eabi/11.2.1/include-fixed
+ c:\progra~2\armgnu~1\112202~1.02\bin\../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/include
+End of search list.
+GNU C17 (GNU Toolchain for the Arm Architecture 11.2-2022.02 (arm-11.16)) version 11.2.1 20220111 (arm-none-eabi)
+	compiled by GNU C version 7.3-win32 20180312, GMP version 6.2.1, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.15-1-g835ea3a-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+Compiler executable checksum: e9130319bd844d450d1dd9151148462d
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_8aa2e.dir\CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles\cmTC_8aa2e.dir\'
+ c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/bin/as.exe -march=armv4t -mfloat-abi=soft -meabi=5 -o CMakeFiles\cmTC_8aa2e.dir\CMakeCCompilerABI.c.obj C:\Users\moham\AppData\Local\Temp\ccIb5K29.s
+COMPILER_PATH=c:/progra~2/armgnu~1/112202~1.02/bin/../libexec/gcc/arm-none-eabi/11.2.1/;c:/progra~2/armgnu~1/112202~1.02/bin/../libexec/gcc/;c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/bin/
+LIBRARY_PATH=c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/;c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/;c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_8aa2e.dir\CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles\cmTC_8aa2e.dir\CMakeCCompilerABI.c.'
+Linking C executable cmTC_8aa2e.exe
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_8aa2e.dir\link.txt --verbose=1
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\cmTC_8aa2e.dir/objects.a
+C:\PROGRA~2\ARMGNU~1\112202~1.02\bin\ARM-NO~2.EXE qc CMakeFiles\cmTC_8aa2e.dir/objects.a @CMakeFiles\cmTC_8aa2e.dir\objects1.rsp
+C:\PROGRA~2\ARMGNU~1\112202~1.02\bin\AR19DD~1.EXE  -v -Wl,--whole-archive CMakeFiles\cmTC_8aa2e.dir/objects.a -Wl,--no-whole-archive -o cmTC_8aa2e.exe -Wl,--out-implib,libcmTC_8aa2e.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
+Using built-in specs.
+COLLECT_GCC=C:\PROGRA~2\ARMGNU~1\112202~1.02\bin\AR19DD~1.EXE
+COLLECT_LTO_WRAPPER=c:/progra~2/armgnu~1/112202~1.02/bin/../libexec/gcc/arm-none-eabi/11.2.1/lto-wrapper.exe
+Target: arm-none-eabi
+Configured with: /data/jenkins/workspace/GNU-toolchain/arm-11/src/gcc/configure --target=arm-none-eabi --prefix=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/install// --with-gmp=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/host-tools --with-mpfr=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/host-tools --with-mpc=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/host-tools --with-isl=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/host-tools --disable-shared --disable-nls --disable-threads --disable-tls --enable-checking=release --enable-languages=c,c++,fortran --with-newlib --with-multilib-list=aprofile,rmprofile --with-libiconv-prefix=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/host-tools --host=i686-w64-mingw32 --with-pkgversion='GNU Toolchain for the Arm Architecture 11.2-2022.02 (arm-11.16)' --with-bugurl=https://bugs.linaro.org/
+Thread model: single
+Supported LTO compression algorithms: zlib
+gcc version 11.2.1 20220111 (GNU Toolchain for the Arm Architecture 11.2-2022.02 (arm-11.16)) 
+COMPILER_PATH=c:/progra~2/armgnu~1/112202~1.02/bin/../libexec/gcc/arm-none-eabi/11.2.1/;c:/progra~2/armgnu~1/112202~1.02/bin/../libexec/gcc/;c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/bin/
+LIBRARY_PATH=c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/;c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/;c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_8aa2e.exe' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'cmTC_8aa2e.'
+ c:/progra~2/armgnu~1/112202~1.02/bin/../libexec/gcc/arm-none-eabi/11.2.1/collect2.exe -plugin c:/progra~2/armgnu~1/112202~1.02/bin/../libexec/gcc/arm-none-eabi/11.2.1/liblto_plugin.dll -plugin-opt=c:/progra~2/armgnu~1/112202~1.02/bin/../libexec/gcc/arm-none-eabi/11.2.1/lto-wrapper.exe -plugin-opt=-fresolution=C:\Users\moham\AppData\Local\Temp\ccuDBqHC.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -X -o cmTC_8aa2e.exe c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/crti.o c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/crtbegin.o c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/crt0.o -Lc:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1 -Lc:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc -Lc:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/lib --whole-archive CMakeFiles\cmTC_8aa2e.dir/objects.a --no-whole-archive --out-implib libcmTC_8aa2e.dll.a --major-image-version 0 --minor-image-version 0 --start-group -lgcc -lc --end-group c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/crtend.o c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/crtn.o
+c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/bin/ld.exe: unrecognized option '--major-image-version'
+c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/bin/ld.exe: use the --help option for usage information
+collect2.exe: error: ld returned 1 exit status
+mingw32-make[1]: *** [CMakeFiles\cmTC_8aa2e.dir\build.make:99: cmTC_8aa2e.exe] Error 1
+mingw32-make[1]: Leaving directory 'C:/Users/moham/OneDrive/Documents/Arduino/libraries/build/CMakeFiles/CMakeTmp'
+mingw32-make: *** [Makefile:126: cmTC_8aa2e/fast] Error 2
+
+
+
+
+Determining if the C compiler works failed with the following output:
+Change Dir: C:/Users/moham/OneDrive/Documents/Arduino/libraries/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_56c33/fast && C:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\cmTC_56c33.dir\build.make CMakeFiles/cmTC_56c33.dir/build
+mingw32-make[1]: Entering directory 'C:/Users/moham/OneDrive/Documents/Arduino/libraries/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_56c33.dir/testCCompiler.c.obj
+C:\PROGRA~2\ARMGNU~1\112202~1.02\bin\AR19DD~1.EXE    -o CMakeFiles\cmTC_56c33.dir\testCCompiler.c.obj -c C:\Users\moham\OneDrive\Documents\Arduino\libraries\build\CMakeFiles\CMakeTmp\testCCompiler.c
+Linking C executable cmTC_56c33.exe
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_56c33.dir\link.txt --verbose=1
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\cmTC_56c33.dir/objects.a
+C:\PROGRA~2\ARMGNU~1\112202~1.02\bin\ARM-NO~2.EXE qc CMakeFiles\cmTC_56c33.dir/objects.a @CMakeFiles\cmTC_56c33.dir\objects1.rsp
+C:\PROGRA~2\ARMGNU~1\112202~1.02\bin\AR19DD~1.EXE -Wl,--whole-archive CMakeFiles\cmTC_56c33.dir/objects.a -Wl,--no-whole-archive -o cmTC_56c33.exe -Wl,--out-implib,libcmTC_56c33.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_56c33.dir\linklibs.rsp
+c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/bin/ld.exe: unrecognized option '--major-image-version'
+c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/bin/ld.exe: use the --help option for usage information
+collect2.exe: error: ld returned 1 exit status
+mingw32-make[1]: *** [CMakeFiles\cmTC_56c33.dir\build.make:100: cmTC_56c33.exe] Error 1
+mingw32-make[1]: Leaving directory 'C:/Users/moham/OneDrive/Documents/Arduino/libraries/build/CMakeFiles/CMakeTmp'
+mingw32-make: *** [Makefile:126: cmTC_56c33/fast] Error 2
+
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/11.2 2022.02/bin/arm-none-eabi-gcc.exe 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+c:/program files (x86)/arm gnu toolchain arm-none-eabi/11.2 2022.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/bin/ld.exe: c:/program files (x86)/arm gnu toolchain arm-none-eabi/11.2 2022.02/bin/../lib/gcc/arm-none-eabi/11.2.1\libc.a(lib_a-exit.o): in function `exit':
+/data/jenkins/workspace/GNU-toolchain/arm-11/src/newlib-cygwin/newlib/libc/stdlib/exit.c:64: undefined reference to `_exit'
+collect2.exe: error: ld returned 1 exit status
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/11.2 2022.02/bin/arm-none-eabi-g++.exe 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+c:/program files (x86)/arm gnu toolchain arm-none-eabi/11.2 2022.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/bin/ld.exe: c:/program files (x86)/arm gnu toolchain arm-none-eabi/11.2 2022.02/bin/../lib/gcc/arm-none-eabi/11.2.1\libc.a(lib_a-exit.o): in function `exit':
+/data/jenkins/workspace/GNU-toolchain/arm-11/src/newlib-cygwin/newlib/libc/stdlib/exit.c:64: undefined reference to `_exit'
+collect2.exe: error: ld returned 1 exit status
+
+
+Detecting C compiler ABI info failed to compile with the following output:
+Change Dir: C:/Users/moham/OneDrive/Documents/Arduino/libraries/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_a294a/fast && C:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\cmTC_a294a.dir\build.make CMakeFiles/cmTC_a294a.dir/build
+mingw32-make[1]: Entering directory 'C:/Users/moham/OneDrive/Documents/Arduino/libraries/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a294a.dir/CMakeCCompilerABI.c.obj
+C:\PROGRA~2\ARMGNU~1\112202~1.02\bin\AR19DD~1.EXE   -v -o CMakeFiles\cmTC_a294a.dir\CMakeCCompilerABI.c.obj -c "C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCCompilerABI.c"
+Using built-in specs.
+COLLECT_GCC=C:\PROGRA~2\ARMGNU~1\112202~1.02\bin\AR19DD~1.EXE
+Target: arm-none-eabi
+Configured with: /data/jenkins/workspace/GNU-toolchain/arm-11/src/gcc/configure --target=arm-none-eabi --prefix=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/install// --with-gmp=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/host-tools --with-mpfr=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/host-tools --with-mpc=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/host-tools --with-isl=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/host-tools --disable-shared --disable-nls --disable-threads --disable-tls --enable-checking=release --enable-languages=c,c++,fortran --with-newlib --with-multilib-list=aprofile,rmprofile --with-libiconv-prefix=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/host-tools --host=i686-w64-mingw32 --with-pkgversion='GNU Toolchain for the Arm Architecture 11.2-2022.02 (arm-11.16)' --with-bugurl=https://bugs.linaro.org/
+Thread model: single
+Supported LTO compression algorithms: zlib
+gcc version 11.2.1 20220111 (GNU Toolchain for the Arm Architecture 11.2-2022.02 (arm-11.16)) 
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_a294a.dir\CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles\cmTC_a294a.dir\'
+ c:/progra~2/armgnu~1/112202~1.02/bin/../libexec/gcc/arm-none-eabi/11.2.1/cc1.exe -quiet -v -iprefix c:\progra~2\armgnu~1\112202~1.02\bin\../lib/gcc/arm-none-eabi/11.2.1/ -D__USES_INITFINI__ C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles\cmTC_a294a.dir\ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=arm7tdmi -mfloat-abi=soft -marm -mlibarch=armv4t -march=armv4t -version -o C:\Users\moham\AppData\Local\Temp\ccbb8xOh.s
+GNU C17 (GNU Toolchain for the Arm Architecture 11.2-2022.02 (arm-11.16)) version 11.2.1 20220111 (arm-none-eabi)
+	compiled by GNU C version 7.3-win32 20180312, GMP version 6.2.1, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.15-1-g835ea3a-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring nonexistent directory "c:\progra~2\armgnu~1\112202~1.02\bin\../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/sys-include"
+ignoring duplicate directory "c:/progra~2/armgnu~1/112202~1.02/lib/gcc/../../lib/gcc/arm-none-eabi/11.2.1/include"
+ignoring duplicate directory "c:/progra~2/armgnu~1/112202~1.02/lib/gcc/../../lib/gcc/arm-none-eabi/11.2.1/include-fixed"
+ignoring nonexistent directory "c:/progra~2/armgnu~1/112202~1.02/lib/gcc/../../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/sys-include"
+ignoring duplicate directory "c:/progra~2/armgnu~1/112202~1.02/lib/gcc/../../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ c:\progra~2\armgnu~1\112202~1.02\bin\../lib/gcc/arm-none-eabi/11.2.1/include
+ c:\progra~2\armgnu~1\112202~1.02\bin\../lib/gcc/arm-none-eabi/11.2.1/include-fixed
+ c:\progra~2\armgnu~1\112202~1.02\bin\../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/include
+End of search list.
+GNU C17 (GNU Toolchain for the Arm Architecture 11.2-2022.02 (arm-11.16)) version 11.2.1 20220111 (arm-none-eabi)
+	compiled by GNU C version 7.3-win32 20180312, GMP version 6.2.1, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.15-1-g835ea3a-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+Compiler executable checksum: e9130319bd844d450d1dd9151148462d
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_a294a.dir\CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles\cmTC_a294a.dir\'
+ c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/bin/as.exe -march=armv4t -mfloat-abi=soft -meabi=5 -o CMakeFiles\cmTC_a294a.dir\CMakeCCompilerABI.c.obj C:\Users\moham\AppData\Local\Temp\ccbb8xOh.s
+COMPILER_PATH=c:/progra~2/armgnu~1/112202~1.02/bin/../libexec/gcc/arm-none-eabi/11.2.1/;c:/progra~2/armgnu~1/112202~1.02/bin/../libexec/gcc/;c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/bin/
+LIBRARY_PATH=c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/;c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/;c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_a294a.dir\CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles\cmTC_a294a.dir\CMakeCCompilerABI.c.'
+Linking C executable cmTC_a294a.exe
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_a294a.dir\link.txt --verbose=1
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\cmTC_a294a.dir/objects.a
+C:\PROGRA~2\ARMGNU~1\112202~1.02\bin\ARM-NO~2.EXE qc CMakeFiles\cmTC_a294a.dir/objects.a @CMakeFiles\cmTC_a294a.dir\objects1.rsp
+C:\PROGRA~2\ARMGNU~1\112202~1.02\bin\AR19DD~1.EXE  -v -Wl,--whole-archive CMakeFiles\cmTC_a294a.dir/objects.a -Wl,--no-whole-archive -o cmTC_a294a.exe -Wl,--out-implib,libcmTC_a294a.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
+Using built-in specs.
+COLLECT_GCC=C:\PROGRA~2\ARMGNU~1\112202~1.02\bin\AR19DD~1.EXE
+COLLECT_LTO_WRAPPER=c:/progra~2/armgnu~1/112202~1.02/bin/../libexec/gcc/arm-none-eabi/11.2.1/lto-wrapper.exe
+Target: arm-none-eabi
+Configured with: /data/jenkins/workspace/GNU-toolchain/arm-11/src/gcc/configure --target=arm-none-eabi --prefix=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/install// --with-gmp=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/host-tools --with-mpfr=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/host-tools --with-mpc=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/host-tools --with-isl=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/host-tools --disable-shared --disable-nls --disable-threads --disable-tls --enable-checking=release --enable-languages=c,c++,fortran --with-newlib --with-multilib-list=aprofile,rmprofile --with-libiconv-prefix=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/host-tools --host=i686-w64-mingw32 --with-pkgversion='GNU Toolchain for the Arm Architecture 11.2-2022.02 (arm-11.16)' --with-bugurl=https://bugs.linaro.org/
+Thread model: single
+Supported LTO compression algorithms: zlib
+gcc version 11.2.1 20220111 (GNU Toolchain for the Arm Architecture 11.2-2022.02 (arm-11.16)) 
+COMPILER_PATH=c:/progra~2/armgnu~1/112202~1.02/bin/../libexec/gcc/arm-none-eabi/11.2.1/;c:/progra~2/armgnu~1/112202~1.02/bin/../libexec/gcc/;c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/bin/
+LIBRARY_PATH=c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/;c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/;c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a294a.exe' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'cmTC_a294a.'
+ c:/progra~2/armgnu~1/112202~1.02/bin/../libexec/gcc/arm-none-eabi/11.2.1/collect2.exe -plugin c:/progra~2/armgnu~1/112202~1.02/bin/../libexec/gcc/arm-none-eabi/11.2.1/liblto_plugin.dll -plugin-opt=c:/progra~2/armgnu~1/112202~1.02/bin/../libexec/gcc/arm-none-eabi/11.2.1/lto-wrapper.exe -plugin-opt=-fresolution=C:\Users\moham\AppData\Local\Temp\cc17Y94h.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -X -o cmTC_a294a.exe c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/crti.o c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/crtbegin.o c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/crt0.o -Lc:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1 -Lc:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc -Lc:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/lib --whole-archive CMakeFiles\cmTC_a294a.dir/objects.a --no-whole-archive --out-implib libcmTC_a294a.dll.a --major-image-version 0 --minor-image-version 0 --start-group -lgcc -lc --end-group c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/crtend.o c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/crtn.o
+c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/bin/ld.exe: unrecognized option '--major-image-version'
+c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/bin/ld.exe: use the --help option for usage information
+collect2.exe: error: ld returned 1 exit status
+mingw32-make[1]: *** [CMakeFiles\cmTC_a294a.dir\build.make:99: cmTC_a294a.exe] Error 1
+mingw32-make[1]: Leaving directory 'C:/Users/moham/OneDrive/Documents/Arduino/libraries/build/CMakeFiles/CMakeTmp'
+mingw32-make: *** [Makefile:126: cmTC_a294a/fast] Error 2
+
+
+
+
+Determining if the C compiler works failed with the following output:
+Change Dir: C:/Users/moham/OneDrive/Documents/Arduino/libraries/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_81b25/fast && C:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\cmTC_81b25.dir\build.make CMakeFiles/cmTC_81b25.dir/build
+mingw32-make[1]: Entering directory 'C:/Users/moham/OneDrive/Documents/Arduino/libraries/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_81b25.dir/testCCompiler.c.obj
+C:\PROGRA~2\ARMGNU~1\112202~1.02\bin\AR19DD~1.EXE    -o CMakeFiles\cmTC_81b25.dir\testCCompiler.c.obj -c C:\Users\moham\OneDrive\Documents\Arduino\libraries\build\CMakeFiles\CMakeTmp\testCCompiler.c
+Linking C executable cmTC_81b25.exe
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_81b25.dir\link.txt --verbose=1
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\cmTC_81b25.dir/objects.a
+C:\PROGRA~2\ARMGNU~1\112202~1.02\bin\ARM-NO~2.EXE qc CMakeFiles\cmTC_81b25.dir/objects.a @CMakeFiles\cmTC_81b25.dir\objects1.rsp
+C:\PROGRA~2\ARMGNU~1\112202~1.02\bin\AR19DD~1.EXE -Wl,--whole-archive CMakeFiles\cmTC_81b25.dir/objects.a -Wl,--no-whole-archive -o cmTC_81b25.exe -Wl,--out-implib,libcmTC_81b25.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_81b25.dir\linklibs.rsp
+c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/bin/ld.exe: unrecognized option '--major-image-version'
+c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/bin/ld.exe: use the --help option for usage information
+collect2.exe: error: ld returned 1 exit status
+mingw32-make[1]: *** [CMakeFiles\cmTC_81b25.dir\build.make:100: cmTC_81b25.exe] Error 1
+mingw32-make[1]: Leaving directory 'C:/Users/moham/OneDrive/Documents/Arduino/libraries/build/CMakeFiles/CMakeTmp'
+mingw32-make: *** [Makefile:126: cmTC_81b25/fast] Error 2
+
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/11.2 2022.02/bin/arm-none-eabi-gcc.exe 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+c:/program files (x86)/arm gnu toolchain arm-none-eabi/11.2 2022.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/bin/ld.exe: c:/program files (x86)/arm gnu toolchain arm-none-eabi/11.2 2022.02/bin/../lib/gcc/arm-none-eabi/11.2.1\libc.a(lib_a-exit.o): in function `exit':
+/data/jenkins/workspace/GNU-toolchain/arm-11/src/newlib-cygwin/newlib/libc/stdlib/exit.c:64: undefined reference to `_exit'
+collect2.exe: error: ld returned 1 exit status
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/11.2 2022.02/bin/arm-none-eabi-g++.exe 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+c:/program files (x86)/arm gnu toolchain arm-none-eabi/11.2 2022.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/bin/ld.exe: c:/program files (x86)/arm gnu toolchain arm-none-eabi/11.2 2022.02/bin/../lib/gcc/arm-none-eabi/11.2.1\libc.a(lib_a-exit.o): in function `exit':
+/data/jenkins/workspace/GNU-toolchain/arm-11/src/newlib-cygwin/newlib/libc/stdlib/exit.c:64: undefined reference to `_exit'
+collect2.exe: error: ld returned 1 exit status
+
+
+Detecting C compiler ABI info failed to compile with the following output:
+Change Dir: C:/Users/moham/OneDrive/Documents/Arduino/libraries/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_629c6/fast && C:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\cmTC_629c6.dir\build.make CMakeFiles/cmTC_629c6.dir/build
+mingw32-make[1]: Entering directory 'C:/Users/moham/OneDrive/Documents/Arduino/libraries/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_629c6.dir/CMakeCCompilerABI.c.obj
+C:\PROGRA~2\ARMGNU~1\112202~1.02\bin\AR19DD~1.EXE   -v -o CMakeFiles\cmTC_629c6.dir\CMakeCCompilerABI.c.obj -c "C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCCompilerABI.c"
+Using built-in specs.
+COLLECT_GCC=C:\PROGRA~2\ARMGNU~1\112202~1.02\bin\AR19DD~1.EXE
+Target: arm-none-eabi
+Configured with: /data/jenkins/workspace/GNU-toolchain/arm-11/src/gcc/configure --target=arm-none-eabi --prefix=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/install// --with-gmp=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/host-tools --with-mpfr=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/host-tools --with-mpc=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/host-tools --with-isl=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/host-tools --disable-shared --disable-nls --disable-threads --disable-tls --enable-checking=release --enable-languages=c,c++,fortran --with-newlib --with-multilib-list=aprofile,rmprofile --with-libiconv-prefix=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/host-tools --host=i686-w64-mingw32 --with-pkgversion='GNU Toolchain for the Arm Architecture 11.2-2022.02 (arm-11.16)' --with-bugurl=https://bugs.linaro.org/
+Thread model: single
+Supported LTO compression algorithms: zlib
+gcc version 11.2.1 20220111 (GNU Toolchain for the Arm Architecture 11.2-2022.02 (arm-11.16)) 
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_629c6.dir\CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles\cmTC_629c6.dir\'
+ c:/progra~2/armgnu~1/112202~1.02/bin/../libexec/gcc/arm-none-eabi/11.2.1/cc1.exe -quiet -v -iprefix c:\progra~2\armgnu~1\112202~1.02\bin\../lib/gcc/arm-none-eabi/11.2.1/ -D__USES_INITFINI__ C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles\cmTC_629c6.dir\ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=arm7tdmi -mfloat-abi=soft -marm -mlibarch=armv4t -march=armv4t -version -o C:\Users\moham\AppData\Local\Temp\ccFHSAsl.s
+GNU C17 (GNU Toolchain for the Arm Architecture 11.2-2022.02 (arm-11.16)) version 11.2.1 20220111 (arm-none-eabi)
+	compiled by GNU C version 7.3-win32 20180312, GMP version 6.2.1, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.15-1-g835ea3a-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring nonexistent directory "c:\progra~2\armgnu~1\112202~1.02\bin\../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/sys-include"
+ignoring duplicate directory "c:/progra~2/armgnu~1/112202~1.02/lib/gcc/../../lib/gcc/arm-none-eabi/11.2.1/include"
+ignoring duplicate directory "c:/progra~2/armgnu~1/112202~1.02/lib/gcc/../../lib/gcc/arm-none-eabi/11.2.1/include-fixed"
+ignoring nonexistent directory "c:/progra~2/armgnu~1/112202~1.02/lib/gcc/../../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/sys-include"
+ignoring duplicate directory "c:/progra~2/armgnu~1/112202~1.02/lib/gcc/../../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ c:\progra~2\armgnu~1\112202~1.02\bin\../lib/gcc/arm-none-eabi/11.2.1/include
+ c:\progra~2\armgnu~1\112202~1.02\bin\../lib/gcc/arm-none-eabi/11.2.1/include-fixed
+ c:\progra~2\armgnu~1\112202~1.02\bin\../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/include
+End of search list.
+GNU C17 (GNU Toolchain for the Arm Architecture 11.2-2022.02 (arm-11.16)) version 11.2.1 20220111 (arm-none-eabi)
+	compiled by GNU C version 7.3-win32 20180312, GMP version 6.2.1, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.15-1-g835ea3a-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+Compiler executable checksum: e9130319bd844d450d1dd9151148462d
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_629c6.dir\CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles\cmTC_629c6.dir\'
+ c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/bin/as.exe -march=armv4t -mfloat-abi=soft -meabi=5 -o CMakeFiles\cmTC_629c6.dir\CMakeCCompilerABI.c.obj C:\Users\moham\AppData\Local\Temp\ccFHSAsl.s
+COMPILER_PATH=c:/progra~2/armgnu~1/112202~1.02/bin/../libexec/gcc/arm-none-eabi/11.2.1/;c:/progra~2/armgnu~1/112202~1.02/bin/../libexec/gcc/;c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/bin/
+LIBRARY_PATH=c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/;c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/;c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_629c6.dir\CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles\cmTC_629c6.dir\CMakeCCompilerABI.c.'
+Linking C executable cmTC_629c6.exe
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_629c6.dir\link.txt --verbose=1
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\cmTC_629c6.dir/objects.a
+C:\PROGRA~2\ARMGNU~1\112202~1.02\bin\ARM-NO~2.EXE qc CMakeFiles\cmTC_629c6.dir/objects.a @CMakeFiles\cmTC_629c6.dir\objects1.rsp
+C:\PROGRA~2\ARMGNU~1\112202~1.02\bin\AR19DD~1.EXE  -v -Wl,--whole-archive CMakeFiles\cmTC_629c6.dir/objects.a -Wl,--no-whole-archive -o cmTC_629c6.exe -Wl,--out-implib,libcmTC_629c6.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
+Using built-in specs.
+COLLECT_GCC=C:\PROGRA~2\ARMGNU~1\112202~1.02\bin\AR19DD~1.EXE
+COLLECT_LTO_WRAPPER=c:/progra~2/armgnu~1/112202~1.02/bin/../libexec/gcc/arm-none-eabi/11.2.1/lto-wrapper.exe
+Target: arm-none-eabi
+Configured with: /data/jenkins/workspace/GNU-toolchain/arm-11/src/gcc/configure --target=arm-none-eabi --prefix=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/install// --with-gmp=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/host-tools --with-mpfr=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/host-tools --with-mpc=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/host-tools --with-isl=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/host-tools --disable-shared --disable-nls --disable-threads --disable-tls --enable-checking=release --enable-languages=c,c++,fortran --with-newlib --with-multilib-list=aprofile,rmprofile --with-libiconv-prefix=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/host-tools --host=i686-w64-mingw32 --with-pkgversion='GNU Toolchain for the Arm Architecture 11.2-2022.02 (arm-11.16)' --with-bugurl=https://bugs.linaro.org/
+Thread model: single
+Supported LTO compression algorithms: zlib
+gcc version 11.2.1 20220111 (GNU Toolchain for the Arm Architecture 11.2-2022.02 (arm-11.16)) 
+COMPILER_PATH=c:/progra~2/armgnu~1/112202~1.02/bin/../libexec/gcc/arm-none-eabi/11.2.1/;c:/progra~2/armgnu~1/112202~1.02/bin/../libexec/gcc/;c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/bin/
+LIBRARY_PATH=c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/;c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/;c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_629c6.exe' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'cmTC_629c6.'
+ c:/progra~2/armgnu~1/112202~1.02/bin/../libexec/gcc/arm-none-eabi/11.2.1/collect2.exe -plugin c:/progra~2/armgnu~1/112202~1.02/bin/../libexec/gcc/arm-none-eabi/11.2.1/liblto_plugin.dll -plugin-opt=c:/progra~2/armgnu~1/112202~1.02/bin/../libexec/gcc/arm-none-eabi/11.2.1/lto-wrapper.exe -plugin-opt=-fresolution=C:\Users\moham\AppData\Local\Temp\ccRjZuAU.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -X -o cmTC_629c6.exe c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/crti.o c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/crtbegin.o c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/crt0.o -Lc:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1 -Lc:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc -Lc:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/lib --whole-archive CMakeFiles\cmTC_629c6.dir/objects.a --no-whole-archive --out-implib libcmTC_629c6.dll.a --major-image-version 0 --minor-image-version 0 --start-group -lgcc -lc --end-group c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/crtend.o c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/crtn.o
+c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/bin/ld.exe: unrecognized option '--major-image-version'
+c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/bin/ld.exe: use the --help option for usage information
+collect2.exe: error: ld returned 1 exit status
+mingw32-make[1]: *** [CMakeFiles\cmTC_629c6.dir\build.make:99: cmTC_629c6.exe] Error 1
+mingw32-make[1]: Leaving directory 'C:/Users/moham/OneDrive/Documents/Arduino/libraries/build/CMakeFiles/CMakeTmp'
+mingw32-make: *** [Makefile:126: cmTC_629c6/fast] Error 2
+
+
+
+
+Determining if the C compiler works failed with the following output:
+Change Dir: C:/Users/moham/OneDrive/Documents/Arduino/libraries/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_bf456/fast && C:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\cmTC_bf456.dir\build.make CMakeFiles/cmTC_bf456.dir/build
+mingw32-make[1]: Entering directory 'C:/Users/moham/OneDrive/Documents/Arduino/libraries/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_bf456.dir/testCCompiler.c.obj
+C:\PROGRA~2\ARMGNU~1\112202~1.02\bin\AR19DD~1.EXE    -o CMakeFiles\cmTC_bf456.dir\testCCompiler.c.obj -c C:\Users\moham\OneDrive\Documents\Arduino\libraries\build\CMakeFiles\CMakeTmp\testCCompiler.c
+Linking C executable cmTC_bf456.exe
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_bf456.dir\link.txt --verbose=1
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\cmTC_bf456.dir/objects.a
+C:\PROGRA~2\ARMGNU~1\112202~1.02\bin\ARM-NO~2.EXE qc CMakeFiles\cmTC_bf456.dir/objects.a @CMakeFiles\cmTC_bf456.dir\objects1.rsp
+C:\PROGRA~2\ARMGNU~1\112202~1.02\bin\AR19DD~1.EXE -Wl,--whole-archive CMakeFiles\cmTC_bf456.dir/objects.a -Wl,--no-whole-archive -o cmTC_bf456.exe -Wl,--out-implib,libcmTC_bf456.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_bf456.dir\linklibs.rsp
+c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/bin/ld.exe: unrecognized option '--major-image-version'
+c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/bin/ld.exe: use the --help option for usage information
+collect2.exe: error: ld returned 1 exit status
+mingw32-make[1]: *** [CMakeFiles\cmTC_bf456.dir\build.make:100: cmTC_bf456.exe] Error 1
+mingw32-make[1]: Leaving directory 'C:/Users/moham/OneDrive/Documents/Arduino/libraries/build/CMakeFiles/CMakeTmp'
+mingw32-make: *** [Makefile:126: cmTC_bf456/fast] Error 2
+
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/11.2 2022.02/bin/arm-none-eabi-gcc.exe 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+c:/program files (x86)/arm gnu toolchain arm-none-eabi/11.2 2022.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/bin/ld.exe: c:/program files (x86)/arm gnu toolchain arm-none-eabi/11.2 2022.02/bin/../lib/gcc/arm-none-eabi/11.2.1\libc.a(lib_a-exit.o): in function `exit':
+/data/jenkins/workspace/GNU-toolchain/arm-11/src/newlib-cygwin/newlib/libc/stdlib/exit.c:64: undefined reference to `_exit'
+collect2.exe: error: ld returned 1 exit status
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/11.2 2022.02/bin/arm-none-eabi-g++.exe 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+c:/program files (x86)/arm gnu toolchain arm-none-eabi/11.2 2022.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/bin/ld.exe: c:/program files (x86)/arm gnu toolchain arm-none-eabi/11.2 2022.02/bin/../lib/gcc/arm-none-eabi/11.2.1\libc.a(lib_a-exit.o): in function `exit':
+/data/jenkins/workspace/GNU-toolchain/arm-11/src/newlib-cygwin/newlib/libc/stdlib/exit.c:64: undefined reference to `_exit'
+collect2.exe: error: ld returned 1 exit status
+
+
+Detecting C compiler ABI info failed to compile with the following output:
+Change Dir: C:/Users/moham/OneDrive/Documents/Arduino/libraries/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_92098/fast && C:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\cmTC_92098.dir\build.make CMakeFiles/cmTC_92098.dir/build
+mingw32-make[1]: Entering directory 'C:/Users/moham/OneDrive/Documents/Arduino/libraries/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_92098.dir/CMakeCCompilerABI.c.obj
+C:\PROGRA~2\ARMGNU~1\112202~1.02\bin\AR19DD~1.EXE   -v -o CMakeFiles\cmTC_92098.dir\CMakeCCompilerABI.c.obj -c "C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCCompilerABI.c"
+Using built-in specs.
+COLLECT_GCC=C:\PROGRA~2\ARMGNU~1\112202~1.02\bin\AR19DD~1.EXE
+Target: arm-none-eabi
+Configured with: /data/jenkins/workspace/GNU-toolchain/arm-11/src/gcc/configure --target=arm-none-eabi --prefix=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/install// --with-gmp=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/host-tools --with-mpfr=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/host-tools --with-mpc=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/host-tools --with-isl=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/host-tools --disable-shared --disable-nls --disable-threads --disable-tls --enable-checking=release --enable-languages=c,c++,fortran --with-newlib --with-multilib-list=aprofile,rmprofile --with-libiconv-prefix=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/host-tools --host=i686-w64-mingw32 --with-pkgversion='GNU Toolchain for the Arm Architecture 11.2-2022.02 (arm-11.16)' --with-bugurl=https://bugs.linaro.org/
+Thread model: single
+Supported LTO compression algorithms: zlib
+gcc version 11.2.1 20220111 (GNU Toolchain for the Arm Architecture 11.2-2022.02 (arm-11.16)) 
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_92098.dir\CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles\cmTC_92098.dir\'
+ c:/progra~2/armgnu~1/112202~1.02/bin/../libexec/gcc/arm-none-eabi/11.2.1/cc1.exe -quiet -v -iprefix c:\progra~2\armgnu~1\112202~1.02\bin\../lib/gcc/arm-none-eabi/11.2.1/ -D__USES_INITFINI__ C:\Program Files\CMake\share\cmake-3.23\Modules\CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles\cmTC_92098.dir\ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=arm7tdmi -mfloat-abi=soft -marm -mlibarch=armv4t -march=armv4t -version -o C:\Users\moham\AppData\Local\Temp\ccM3xHxB.s
+GNU C17 (GNU Toolchain for the Arm Architecture 11.2-2022.02 (arm-11.16)) version 11.2.1 20220111 (arm-none-eabi)
+	compiled by GNU C version 7.3-win32 20180312, GMP version 6.2.1, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.15-1-g835ea3a-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring nonexistent directory "c:\progra~2\armgnu~1\112202~1.02\bin\../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/sys-include"
+ignoring duplicate directory "c:/progra~2/armgnu~1/112202~1.02/lib/gcc/../../lib/gcc/arm-none-eabi/11.2.1/include"
+ignoring duplicate directory "c:/progra~2/armgnu~1/112202~1.02/lib/gcc/../../lib/gcc/arm-none-eabi/11.2.1/include-fixed"
+ignoring nonexistent directory "c:/progra~2/armgnu~1/112202~1.02/lib/gcc/../../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/sys-include"
+ignoring duplicate directory "c:/progra~2/armgnu~1/112202~1.02/lib/gcc/../../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ c:\progra~2\armgnu~1\112202~1.02\bin\../lib/gcc/arm-none-eabi/11.2.1/include
+ c:\progra~2\armgnu~1\112202~1.02\bin\../lib/gcc/arm-none-eabi/11.2.1/include-fixed
+ c:\progra~2\armgnu~1\112202~1.02\bin\../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/include
+End of search list.
+GNU C17 (GNU Toolchain for the Arm Architecture 11.2-2022.02 (arm-11.16)) version 11.2.1 20220111 (arm-none-eabi)
+	compiled by GNU C version 7.3-win32 20180312, GMP version 6.2.1, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.15-1-g835ea3a-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+Compiler executable checksum: e9130319bd844d450d1dd9151148462d
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_92098.dir\CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles\cmTC_92098.dir\'
+ c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/bin/as.exe -march=armv4t -mfloat-abi=soft -meabi=5 -o CMakeFiles\cmTC_92098.dir\CMakeCCompilerABI.c.obj C:\Users\moham\AppData\Local\Temp\ccM3xHxB.s
+COMPILER_PATH=c:/progra~2/armgnu~1/112202~1.02/bin/../libexec/gcc/arm-none-eabi/11.2.1/;c:/progra~2/armgnu~1/112202~1.02/bin/../libexec/gcc/;c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/bin/
+LIBRARY_PATH=c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/;c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/;c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_92098.dir\CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles\cmTC_92098.dir\CMakeCCompilerABI.c.'
+Linking C executable cmTC_92098.exe
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_92098.dir\link.txt --verbose=1
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\cmTC_92098.dir/objects.a
+C:\PROGRA~2\ARMGNU~1\112202~1.02\bin\ARM-NO~2.EXE qc CMakeFiles\cmTC_92098.dir/objects.a @CMakeFiles\cmTC_92098.dir\objects1.rsp
+C:\PROGRA~2\ARMGNU~1\112202~1.02\bin\AR19DD~1.EXE  -v -Wl,--whole-archive CMakeFiles\cmTC_92098.dir/objects.a -Wl,--no-whole-archive -o cmTC_92098.exe -Wl,--out-implib,libcmTC_92098.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
+Using built-in specs.
+COLLECT_GCC=C:\PROGRA~2\ARMGNU~1\112202~1.02\bin\AR19DD~1.EXE
+COLLECT_LTO_WRAPPER=c:/progra~2/armgnu~1/112202~1.02/bin/../libexec/gcc/arm-none-eabi/11.2.1/lto-wrapper.exe
+Target: arm-none-eabi
+Configured with: /data/jenkins/workspace/GNU-toolchain/arm-11/src/gcc/configure --target=arm-none-eabi --prefix=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/install// --with-gmp=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/host-tools --with-mpfr=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/host-tools --with-mpc=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/host-tools --with-isl=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/host-tools --disable-shared --disable-nls --disable-threads --disable-tls --enable-checking=release --enable-languages=c,c++,fortran --with-newlib --with-multilib-list=aprofile,rmprofile --with-libiconv-prefix=/data/jenkins/workspace/GNU-toolchain/arm-11/build-mingw-arm-none-eabi/host-tools --host=i686-w64-mingw32 --with-pkgversion='GNU Toolchain for the Arm Architecture 11.2-2022.02 (arm-11.16)' --with-bugurl=https://bugs.linaro.org/
+Thread model: single
+Supported LTO compression algorithms: zlib
+gcc version 11.2.1 20220111 (GNU Toolchain for the Arm Architecture 11.2-2022.02 (arm-11.16)) 
+COMPILER_PATH=c:/progra~2/armgnu~1/112202~1.02/bin/../libexec/gcc/arm-none-eabi/11.2.1/;c:/progra~2/armgnu~1/112202~1.02/bin/../libexec/gcc/;c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/bin/
+LIBRARY_PATH=c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/;c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/;c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_92098.exe' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'cmTC_92098.'
+ c:/progra~2/armgnu~1/112202~1.02/bin/../libexec/gcc/arm-none-eabi/11.2.1/collect2.exe -plugin c:/progra~2/armgnu~1/112202~1.02/bin/../libexec/gcc/arm-none-eabi/11.2.1/liblto_plugin.dll -plugin-opt=c:/progra~2/armgnu~1/112202~1.02/bin/../libexec/gcc/arm-none-eabi/11.2.1/lto-wrapper.exe -plugin-opt=-fresolution=C:\Users\moham\AppData\Local\Temp\ccbq0jEg.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -X -o cmTC_92098.exe c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/crti.o c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/crtbegin.o c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/crt0.o -Lc:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1 -Lc:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc -Lc:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/lib --whole-archive CMakeFiles\cmTC_92098.dir/objects.a --no-whole-archive --out-implib libcmTC_92098.dll.a --major-image-version 0 --minor-image-version 0 --start-group -lgcc -lc --end-group c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/crtend.o c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/crtn.o
+c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/bin/ld.exe: unrecognized option '--major-image-version'
+c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/bin/ld.exe: use the --help option for usage information
+collect2.exe: error: ld returned 1 exit status
+mingw32-make[1]: *** [CMakeFiles\cmTC_92098.dir\build.make:99: cmTC_92098.exe] Error 1
+mingw32-make[1]: Leaving directory 'C:/Users/moham/OneDrive/Documents/Arduino/libraries/build/CMakeFiles/CMakeTmp'
+mingw32-make: *** [Makefile:126: cmTC_92098/fast] Error 2
+
+
+
+
+Determining if the C compiler works failed with the following output:
+Change Dir: C:/Users/moham/OneDrive/Documents/Arduino/libraries/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_815dd/fast && C:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\cmTC_815dd.dir\build.make CMakeFiles/cmTC_815dd.dir/build
+mingw32-make[1]: Entering directory 'C:/Users/moham/OneDrive/Documents/Arduino/libraries/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_815dd.dir/testCCompiler.c.obj
+C:\PROGRA~2\ARMGNU~1\112202~1.02\bin\AR19DD~1.EXE    -o CMakeFiles\cmTC_815dd.dir\testCCompiler.c.obj -c C:\Users\moham\OneDrive\Documents\Arduino\libraries\build\CMakeFiles\CMakeTmp\testCCompiler.c
+Linking C executable cmTC_815dd.exe
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_815dd.dir\link.txt --verbose=1
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\cmTC_815dd.dir/objects.a
+C:\PROGRA~2\ARMGNU~1\112202~1.02\bin\ARM-NO~2.EXE qc CMakeFiles\cmTC_815dd.dir/objects.a @CMakeFiles\cmTC_815dd.dir\objects1.rsp
+C:\PROGRA~2\ARMGNU~1\112202~1.02\bin\AR19DD~1.EXE -Wl,--whole-archive CMakeFiles\cmTC_815dd.dir/objects.a -Wl,--no-whole-archive -o cmTC_815dd.exe -Wl,--out-implib,libcmTC_815dd.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_815dd.dir\linklibs.rsp
+c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/bin/ld.exe: unrecognized option '--major-image-version'
+c:/progra~2/armgnu~1/112202~1.02/bin/../lib/gcc/arm-none-eabi/11.2.1/../../../../arm-none-eabi/bin/ld.exe: use the --help option for usage information
+collect2.exe: error: ld returned 1 exit status
+mingw32-make[1]: *** [CMakeFiles\cmTC_815dd.dir\build.make:100: cmTC_815dd.exe] Error 1
+mingw32-make[1]: Leaving directory 'C:/Users/moham/OneDrive/Documents/Arduino/libraries/build/CMakeFiles/CMakeTmp'
+mingw32-make: *** [Makefile:126: cmTC_815dd/fast] Error 2
+
+
+
