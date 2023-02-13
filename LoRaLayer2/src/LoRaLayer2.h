@@ -100,6 +100,7 @@ public:
     void setTimestamp(uint64_t timestamp, uint32_t cTime);
     uint64_t getTimestamp(uint32_t cTime);
     void setTimeFlag(bool flag);
+    void setTimestampFlag(bool flag);
 
     // Layer 3 tx/rx wrappers
     int writeData(Datagram datagram, size_t length);
@@ -159,6 +160,7 @@ private:
     int _routingInterval;
     int _lTime;
     uint64_t _timestamp;
+    bool _setTimestamp;
     bool _setTime;
     int _disableRoutingPackets;
     int _dutyInterval;

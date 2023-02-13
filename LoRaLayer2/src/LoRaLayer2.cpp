@@ -19,7 +19,8 @@ LL2Class::LL2Class(Layer1Class *lora_1, Layer1Class *lora_2)
       _dutyCycle(1),
       _lTime(0),
       _timestamp(0),
-      _setTime(false)
+      _setTime(false),
+      _setTimestamp(false)
 {
     rxBuffer = new packetBuffer;
 };
@@ -260,6 +261,10 @@ void LL2Class::setTimeFlag(bool flag){
     _setTime = flag;
 }
 
+void LL2Class::setTimestampFlag(bool flag){
+    _setTimestamp = flag;
+}
+
 void LL2Class::setTimestamp(uint64_t timestamp, uint32_t cTime)
 {
     if (_setTime)
@@ -282,11 +287,14 @@ uint64_t LL2Class::getTimestamp(uint32_t cTime)
 Packet LL2Class::buildRoutingPacket()
 {
     uint8_t data[DATA_LENGTH];
-    int dataLength = 8;
-    time_stamp.time_ = getTimestamp(millis());
-    //  Add time stamp to every routing Packet
-    memcpy(data, time_stamp.timeArr, 8);
-
+    int dataLength = 0;
+    if (_setTimestamp)
+    {
+        dataLength = 8;
+        time_stamp.time_ = getTimestamp(millis());
+        //  Add time stamp to every routing Packet
+        memcpy(data, time_stamp.timeArr, 8);
+    }
     int routesPerPacket = _routeEntry;
     if (_routeEntry >= MAX_ROUTES_PER_PACKET - 1)
     {
@@ -517,11 +525,15 @@ int LL2Class::parseNeighbor(Packet packet)
 int LL2Class::parseRoutingTable(Packet packet, int n_entry)
 {
     int entry = -1;
-    int numberOfRoutes = (packet.totalLength - HEADER_LENGTH - 8) / (ADDR_LENGTH + 2);
-    uint8_t data1[packet.totalLength - HEADER_LENGTH];
-    memcpy(data1, &packet.datagram, sizeof(data1));
-    uint8_t data[sizeof(data1)-8];
-    memcpy(data,&data1[8],sizeof(data));
+    int numberOfRoutes = (packet.totalLength - HEADER_LENGTH) / (ADDR_LENGTH + 2);
+    uint8_t data[packet.totalLength - HEADER_LENGTH];
+    memcpy(data, &packet.datagram, sizeof(data));
+    if (_setTimestamp)
+    {
+        numberOfRoutes = (packet.totalLength - HEADER_LENGTH - 8) / (ADDR_LENGTH + 2);
+        memcpy(data, 8 + &packet.datagram,sizeof(data) - 8);
+    }
+    
     for (int i = 0; i < numberOfRoutes; i++)
     {
         RoutingTableEntry route;
@@ -557,8 +569,12 @@ void LL2Class::parseForRoutes(Packet packet)
     if (memcmp(packet.receiver, ROUTING, ADDR_LENGTH) == 0)
     {
         // get timestampe from the routing packet
-        memcpy(time_stamp.timeArr, &packet.datagram, sizeof(time_stamp.timeArr));
-        setTimestamp(time_stamp.time_, millis());
+        if (_setTimestamp)
+        {
+            memcpy(time_stamp.timeArr, &packet.datagram, sizeof(time_stamp.timeArr));
+            setTimestamp(time_stamp.time_, millis());
+        }
+        
         // packet contains routing table info, parse for routes in datagram only
         parseRoutingTable(packet, n_entry);
         return;
