@@ -422,15 +422,28 @@ int LL2Class::checkRoutingTable(RoutingTableEntry route)
 }
 void LL2Class::clearNeigbourRoutingTables(void)
 {
-    // NeighborTableEntry _neighborTable1[255];
-    // RoutingTableEntry _routeTable1[255];
-    memset(_neighborTable, {}, sizeof(_neighborTable));
-    memset(_routeTable, {}, sizeof(_routeTable));
-    _routeEntry = 0;
-    _neighborEntry = 0;
+    // // NeighborTableEntry _neighborTable1[255];
+    // // RoutingTableEntry _routeTable1[255];
+    // memset(_neighborTable, {}, sizeof(_neighborTable));
+    // memset(_routeTable, {}, sizeof(_routeTable));
+    // _routeEntry = 0;
+    // _neighborEntry = 0;
 
-    // _neighborTable = {};
-    // _routeTable = {};
+    // // _neighborTable = {};
+    // // _routeTable = {};
+    for (int i = 0; i < _neighborEntry; i++)
+    {
+        _neighborTable[i].packet_success = 0;
+        _neighborTable[i].metric = 0;
+        _neighborTable[i].lastReceived = 0;
+    }
+    _messageCount = 0;
+    for (int i = 0; i < _routeEntry; i++)
+    {
+        _routeTable[i].distance = 255;
+        _routeTable[i].metric = 0;
+        _routeTable[i].lastReceived = 0;
+    }
 }
 int LL2Class::updateNeighborTable(NeighborTableEntry neighbor, int entry)
 {
