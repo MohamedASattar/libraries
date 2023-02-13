@@ -296,6 +296,7 @@ Packet LL2Class::buildRoutingPacket()
         memcpy(data, time_stamp.timeArr, 8);
     }
     int routesPerPacket = _routeEntry;
+    //TODO add the entire routing table into N routing packets
     if (_routeEntry >= MAX_ROUTES_PER_PACKET - 1)
     {
         routesPerPacket = MAX_ROUTES_PER_PACKET - 1;
@@ -311,6 +312,11 @@ Packet LL2Class::buildRoutingPacket()
         dataLength++;
         data[dataLength] = _routeTable[i].metric;
         dataLength++;
+        for (int j = 0; j < ADDR_LENGTH; j++)
+        {
+            data[dataLength] = _routeTable[i].nextHop[j];
+            dataLength++;
+        }
     }
     uint8_t nextHop[ADDR_LENGTH] = {0xaf, 0xff, 0xff, 0xff};
     // copy raw data into datagram to create packet
@@ -452,6 +458,19 @@ void LL2Class::clearNeigbourRoutingTables(void)
         _routeTable[i].metric = 0;
         _routeTable[i].lastReceived = 0;
     }
+
+    //TODO update 
+    // RoutingTableEntry route;
+    // memcpy(route.destination, packet.sender, ADDR_LENGTH);
+    // memcpy(route.nextHop, packet.sender, ADDR_LENGTH);
+    // route.distance = 1;
+    // route.metric = _neighborTable[n_entry].metric;
+    // int r_entry = checkRoutingTable(route);
+    // if (r_entry >= 0)
+    // {
+    //     updateRouteTable(route, r_entry);
+    // }
+    // return n_entry;
 }
 int LL2Class::updateNeighborTable(NeighborTableEntry neighbor, int entry)
 {
@@ -525,26 +544,46 @@ int LL2Class::parseNeighbor(Packet packet)
 int LL2Class::parseRoutingTable(Packet packet, int n_entry)
 {
     int entry = -1;
-    int numberOfRoutes = (packet.totalLength - HEADER_LENGTH) / (ADDR_LENGTH + 2);
+    int numberOfRoutes = (packet.totalLength - HEADER_LENGTH) / (2 * ADDR_LENGTH + 2);
     uint8_t data[packet.totalLength - HEADER_LENGTH];
     memcpy(data, &packet.datagram, sizeof(data));
     if (_setTimestamp)
     {
-        numberOfRoutes = (packet.totalLength - HEADER_LENGTH - 8) / (ADDR_LENGTH + 2);
+        numberOfRoutes = (packet.totalLength - HEADER_LENGTH - 8) / (2 * ADDR_LENGTH + 2);
         memcpy(data, 8 + &packet.datagram,sizeof(data) - 8);
     }
     
     for (int i = 0; i < numberOfRoutes; i++)
     {
         RoutingTableEntry route;
-        memcpy(route.destination, data + (ADDR_LENGTH + 2) * i, ADDR_LENGTH);
+        NeighborTableEntry neighbor;
+
+        memcpy(route.destination, data + (2 * ADDR_LENGTH + 2) * i, ADDR_LENGTH);
         memcpy(route.nextHop, packet.source, ADDR_LENGTH);
-        route.distance = data[(ADDR_LENGTH + 2) * i + ADDR_LENGTH];
+        route.distance = data[(2 * ADDR_LENGTH + 2) * i + ADDR_LENGTH];
         route.distance++; // add a hop to distance
-        float metric = (float)data[(ADDR_LENGTH + 2) * i + ADDR_LENGTH + 1];
+        float metric = (float)data[(2 * ADDR_LENGTH + 2) * i + ADDR_LENGTH + 1];
         float hopRatio = 1 / ((float)route.distance);
         // average neighbor metric with rest of route metric
         route.metric = (uint8_t)(((float)_neighborTable[n_entry].metric) * (hopRatio) + ((float)metric) * (1 - hopRatio));
+        
+        memcpy(neighbor.address, route.destination, sizeof(neighbor.address));
+
+        if (memcmp( route.destination, data + (2 * ADDR_LENGTH + 2) * i + ADDR_LENGTH + 2, ADDR_LENGTH) == 0 && metric == 0 && route.distance == 0)
+        {
+            /* if routing packet contains faraway dropped node route; 
+            update routing table for this by metric = 0 and distance = 255 */
+            route.metric = 0;
+            route.distance = 255;
+        }
+        else if (memcmp(_localAddress, data + (2 * ADDR_LENGTH + 2) * i + ADDR_LENGTH + 2, ADDR_LENGTH) == 0 && _neighborTable[checkNeighborTable(neighbor)].metric == 0)
+        {
+            /* if routing packet contains my neighbor dropped node route; 
+            update table for this by metric = 0 and distance = 255 */
+            memcpy(route.nextHop, _localAddress, ADDR_LENGTH);
+            route.metric = 0;
+            route.distance = 255;
+        }
         entry = checkRoutingTable(route);
         if (entry > 0)
         {

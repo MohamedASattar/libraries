@@ -41,7 +41,8 @@
 #define MESSAGE_LENGTH 234 // max message size = 239 - 5
 #define SHA1_LENGTH 40
 #define ADDR_LENGTH 4
-#define MAX_ROUTES_PER_PACKET 39 //40 
+#define MAX_ROUTES_PER_PACKET (int) (DATA_LENGTH / (2 * ADDR_LENGTH + 2)) //23 
+
 #define ASYNC_TX 1
 #define DEFAULT_TTL 30
 
