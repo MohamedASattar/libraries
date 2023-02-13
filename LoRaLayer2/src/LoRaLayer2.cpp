@@ -540,9 +540,10 @@ void LL2Class::parseForRoutes(Packet packet)
     int n_entry = parseNeighbor(packet);
     int r_entry = -1;
 
+    //if incomming packet is routing packet
     if (memcmp(packet.receiver, ROUTING, ADDR_LENGTH) == 0)
     {
-        // TODO get timestampe from the routing packet
+        // get timestampe from the routing packet
         memcpy(time_stamp.timeArr, &packet.datagram, sizeof(time_stamp.timeArr));
         setTimestamp(time_stamp.time_, millis());
         // packet contains routing table info, parse for routes in datagram only
@@ -551,6 +552,7 @@ void LL2Class::parseForRoutes(Packet packet)
     }
 
     // Parse for receiver address route
+    //if i'm a relay and not broadcaster 
     if (memcmp(packet.receiver, _localAddress, ADDR_LENGTH) != 0 &&
         memcmp(packet.receiver, BROADCAST, ADDR_LENGTH) != 0)
     {
@@ -570,6 +572,7 @@ void LL2Class::parseForRoutes(Packet packet)
     }
 
     // Parse for source address route
+    //if this packet from relay update the route metric
     if (memcmp(packet.sender, packet.source, ADDR_LENGTH) != 0)
     {
         // source is different from sender
@@ -589,6 +592,7 @@ void LL2Class::parseForRoutes(Packet packet)
     }
 
     // Parse for destination address route
+    // if i'm not broadcaster and the packet is not meant for me
     if (memcmp(packet.datagram.destination, _localAddress, ADDR_LENGTH) != 0 &&
         memcmp(packet.datagram.destination, packet.receiver, ADDR_LENGTH) != 0 &&
         memcmp(packet.datagram.destination, BROADCAST, ADDR_LENGTH) != 0)
