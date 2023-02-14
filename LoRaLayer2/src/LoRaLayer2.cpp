@@ -569,14 +569,14 @@ int LL2Class::parseRoutingTable(Packet packet, int n_entry)
         
         memcpy(neighbor.address, route.destination, sizeof(neighbor.address));
 
-        if (memcmp( route.destination, data + (2 * ADDR_LENGTH + 2) * i + ADDR_LENGTH + 2, ADDR_LENGTH) == 0 && metric == 0 && route.distance == 0)
+        if ( metric == 0 && route.distance == 0)
         {
             /* if routing packet contains faraway dropped node route; 
             update routing table for this by metric = 0 and distance = 255 */
             route.metric = 0;
             route.distance = 255;
         }
-        else if (memcmp(_localAddress, data + (2 * ADDR_LENGTH + 2) * i + ADDR_LENGTH + 2, ADDR_LENGTH) == 0 && _neighborTable[checkNeighborTable(neighbor)].metric == 0)
+        else if (memcmp(_localAddress, data + (2 * ADDR_LENGTH + 2) * i + ADDR_LENGTH + 2, ADDR_LENGTH) == 0 && checkNeighborTable(neighbor) != _neighborEntry)
         {
             /* if routing packet contains my neighbor dropped node route; 
             update table for this by metric = 0 and distance = 255 */
