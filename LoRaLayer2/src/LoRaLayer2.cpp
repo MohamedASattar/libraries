@@ -584,6 +584,11 @@ int LL2Class::parseRoutingTable(Packet packet, int n_entry)
             route.metric = 0;
             route.distance = 255;
         }
+        else if(memcmp(_routeTable[checkRoutingTable(route)].nextHop,route.nextHop,4) == 0 && _routeTable[checkRoutingTable(route)].metric == 0 && _routeTable[checkRoutingTable(route)].distance == 255)
+        {
+            route.metric = 0;
+            route.distance = 255;
+        }
         entry = checkRoutingTable(route);
         if (entry > 0)
         {
