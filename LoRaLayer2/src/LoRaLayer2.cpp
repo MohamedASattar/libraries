@@ -327,6 +327,67 @@ Packet LL2Class::buildRoutingPacket()
     return packet;
 }
 
+Packet LL2Class::buildRoutingWithServiceGradePacket()
+{
+    uint8_t data[DATA_LENGTH];
+    int dataLength = 0;
+    
+    int routesPerPacket = _routeEntry;
+    //TODO add the entire routing table into N routing packets
+    if (_routeEntry > 46)
+    {
+        routesPerPacket = 46;
+    }
+    for (int i = 0; i < routesPerPacket; i++)
+    {
+        for (int j = 0; j < ADDR_LENGTH; j++)
+        {
+            data[dataLength] = _routeTable[i].destination[j];
+            dataLength++;
+        }
+        if ( _routeTable[i].distance > 10)
+        {
+            data[dataLength] = 0;
+        }
+        else if ( _routeTable[i].distance > 5 )
+        {
+            data[dataLength] = 1;
+        }
+        else if ( _routeTable[i].distance > 2 )
+        {
+            data[dataLength] = 2;
+        }
+        else
+        {
+            data[dataLength] = 3;
+        }
+        dataLength++;
+    }
+    uint8_t nextHop[ADDR_LENGTH] = {0xff, 0xff, 0xff, 0xff};
+    // copy raw data into datagram to create packet
+    Datagram datagram; //= { 0xaf, 0xff, 0xff, 0xff, 'r' };
+    memcpy(&datagram.message, &data, dataLength);
+    memcpy(&datagram.destination, &nextHop, ADDR_LENGTH);
+
+    Packet packet = buildPacket(1, nextHop, localAddress(), 0, 0, datagram, dataLength + 5);
+    
+    // Serial.println("data[i]");
+    // for (int i = 0; i< dataLength ; i++) {
+    //     Serial.println(data[i]);
+    // }
+    // Serial.println("datagram.message[i]");
+    // for (int i = 0; i< dataLength; i++) {
+    //     Serial.println(datagram.message[i]);
+    // }
+    // Serial.println("datagram.message[i]");
+    // for (int i = 0; i< dataLength; i++) {
+    //     Serial.println(packet.datagram.message[i]);
+    // }
+    // Serial.println("packet.datagram.message[i]");
+
+    return packet;
+}
+
 double calculateAirtime(double length, double spreadingFactor, double explicitHeader, double lowDR, double codingRate, double bandwidth)
 {
     double timePerSymbol = pow(2, spreadingFactor) / (bandwidth);

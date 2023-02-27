@@ -112,6 +112,8 @@ public:
     void getRoutingTable(char *out);
     void printPacketInfo(Packet packet);
     void clearNeigbourRoutingTables(void);
+    
+    Packet buildRoutingWithServiceGradePacket();
 
     // Main init and loop functions
     int init();
