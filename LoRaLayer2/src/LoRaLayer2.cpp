@@ -181,7 +181,7 @@ Packet LL2Class::readData()
 void LL2Class::getNeighborTable(char *out)
 {
     char *buf = out;
-    buf += sprintf(buf, "Neighbor Table:\n");
+    buf += sprintf(buf, "Neighbor Table:\r\n");
     for (int i = 0; i < _neighborEntry; i++)
     {
         for (int j = 0; j < ADDR_LENGTH; j++)

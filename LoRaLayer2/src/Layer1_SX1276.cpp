@@ -114,7 +114,11 @@ int Layer1Class::init()
   {
     return _loraInitialized;
   }
-
+  state = _LoRa->setCRC(true);
+  if (state != RADIOLIB_ERR_NONE)
+  {
+    return _loraInitialized;
+  }
   _loraInitialized = 1;
   return _loraInitialized;
 }
@@ -192,6 +196,7 @@ int Layer1Class::receive()
       else if (state == RADIOLIB_ERR_CRC_MISMATCH)
       {
         // packet was received, but is malformed
+        Serial.printf("CRC ERROR \n");
         ret = -1;
       }
       else
