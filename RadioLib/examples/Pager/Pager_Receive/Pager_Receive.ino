@@ -29,10 +29,10 @@
 // DIO0 pin:  2
 // RESET pin: 9
 // DIO1 pin:  3
-SX1278 radio = new Module(5, 2, 9, 3);
+SX1278 radio = new Module(10, 2, 9, 3);
 
 // DIO2 pin:  5
-const int pin = 4;
+const int pin = 5;
 
 // create Pager client instance using the FSK module
 PagerClient pager(&radio);
@@ -51,7 +51,7 @@ void setup() {
   // when using one of the non-LoRa modules
   // (RF69, CC1101, Si4432 etc.), use the basic begin() method
   // int state = radio.begin();
-  
+
   if (state == RADIOLIB_ERR_NONE) {
     Serial.println(F("success!"));
   } else {
@@ -60,7 +60,7 @@ void setup() {
     while (true);
   }
 
-  // initalize Pager client
+  // initialize Pager client
   Serial.print(F("[Pager] Initializing ... "));
   // base (center) frequency:     434.0 MHz
   // speed:                       1200 bps
@@ -84,7 +84,7 @@ void setup() {
     Serial.println(state);
     while (true);
   }
-  
+
 }
 
 void loop() {
@@ -110,12 +110,12 @@ void loop() {
       // print the received data
       Serial.print(F("[Pager] Data:\t"));
       Serial.println(str);
-    
+
     } else {
       // some error occurred
       Serial.print(F("failed, code "));
       Serial.println(state);
-    
+
     }
   }
 }

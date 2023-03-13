@@ -22,7 +22,7 @@
 // CS pin:    10
 // GDO0 pin:  2
 // RST pin:   unused
-// GDO2 pin:  3 (optional)
+// GDO2 pin:  3
 CC1101 radio = new Module(10, 2, RADIOLIB_NC, 3);
 
 // or using RadioShield
@@ -48,7 +48,10 @@ void setup() {
 
   // set the function that will be called
   // when packet transmission is finished
-  radio.setGdo0Action(setFlag);
+  // NOTE: Unlike other modules (such as SX127x),
+  //       different GDOx pins are used for
+  //       transmit and receive interrupts!
+  radio.setGdo2Action(setFlag);
 
   // start transmitting the first packet
   Serial.print(F("[CC1101] Sending first packet ... "));
@@ -68,9 +71,6 @@ void setup() {
 // flag to indicate that a packet was sent
 volatile bool transmittedFlag = false;
 
-// disable interrupt when it's not needed
-volatile bool enableInterrupt = true;
-
 // this function is called when a complete packet
 // is transmitted by the module
 // IMPORTANT: this function MUST be 'void' type
@@ -79,11 +79,6 @@ volatile bool enableInterrupt = true;
   ICACHE_RAM_ATTR
 #endif
 void setFlag(void) {
-  // check if the interrupt is enabled
-  if(!enableInterrupt) {
-    return;
-  }
-
   // we sent a packet, set the flag
   transmittedFlag = true;
 }
@@ -91,10 +86,6 @@ void setFlag(void) {
 void loop() {
   // check if the previous transmission finished
   if(transmittedFlag) {
-    // disable the interrupt service routine while
-    // processing the data
-    enableInterrupt = false;
-
     // reset flag
     transmittedFlag = false;
 
@@ -133,9 +124,5 @@ void loop() {
                         0x89, 0xAB, 0xCD, 0xEF};
       int state = radio.startTransmit(byteArr, 8);
     */
-
-    // we're ready to send more packets,
-    // enable interrupt service routine
-    enableInterrupt = true;
   }
 }

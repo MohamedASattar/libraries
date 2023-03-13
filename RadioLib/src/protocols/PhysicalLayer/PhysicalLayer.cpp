@@ -50,12 +50,92 @@ int16_t PhysicalLayer::transmit(const char* str, uint8_t addr) {
   return(transmit((uint8_t*)str, strlen(str), addr));
 }
 
+int16_t PhysicalLayer::transmit(uint8_t* data, size_t len, uint8_t addr) {
+  (void)data;
+  (void)len;
+  (void)addr;
+  return(RADIOLIB_ERR_UNSUPPORTED);
+}
+
+int16_t PhysicalLayer::receive(String& str, size_t len) {
+  int16_t state = RADIOLIB_ERR_NONE;
+
+  // user can override the length of data to read
+  size_t length = len;
+
+  // build a temporary buffer
+  #if defined(RADIOLIB_STATIC_ONLY)
+    uint8_t data[RADIOLIB_STATIC_ARRAY_SIZE + 1];
+  #else
+    uint8_t* data = NULL;
+    if(length == 0) {
+      data = new uint8_t[_maxPacketLength + 1];
+    } else {
+      data = new uint8_t[length + 1];
+    }
+    if(!data) {
+      return(RADIOLIB_ERR_MEMORY_ALLOCATION_FAILED);
+    }
+  #endif
+
+  // attempt packet reception
+  state = receive(data, length);
+
+  // any of the following leads to at least some data being available
+  // let's leave the decision of whether to keep it or not up to the user
+  if((state == RADIOLIB_ERR_NONE) || (state == RADIOLIB_ERR_CRC_MISMATCH) || (state == RADIOLIB_ERR_LORA_HEADER_DAMAGED)) {
+    // read the number of actually received bytes (for unknown packets)
+    if(len == 0) {
+      length = getPacketLength(false);
+    }
+
+    // add null terminator
+    data[length] = 0;
+
+    // initialize Arduino String class
+    str = String((char*)data);
+  }
+
+  // deallocate temporary buffer
+  #if !defined(RADIOLIB_STATIC_ONLY)
+    delete[] data;
+  #endif
+
+  return(state);
+}
+
+int16_t PhysicalLayer::receive(uint8_t* data, size_t len) {
+  (void)data;
+  (void)len;
+  return(RADIOLIB_ERR_UNSUPPORTED);
+}
+
+int16_t PhysicalLayer::standby() {
+  return(standby(RADIOLIB_STANDBY_DEFAULT));
+}
+
+int16_t PhysicalLayer::standby(uint8_t mode) {
+  (void)mode;
+  return(RADIOLIB_ERR_UNSUPPORTED);
+}
+
 int16_t PhysicalLayer::startTransmit(String& str, uint8_t addr) {
   return(startTransmit(str.c_str(), addr));
 }
 
 int16_t PhysicalLayer::startTransmit(const char* str, uint8_t addr) {
   return(startTransmit((uint8_t*)str, strlen(str), addr));
+}
+
+int16_t PhysicalLayer::startTransmit(uint8_t* data, size_t len, uint8_t addr) {
+  (void)data;
+  (void)len;
+  (void)addr;
+  return(RADIOLIB_ERR_UNSUPPORTED);
+}
+
+int16_t PhysicalLayer::finishTransmit() {
+  return(RADIOLIB_ERR_UNSUPPORTED);
 }
 
 int16_t PhysicalLayer::readData(String& str, size_t len) {
@@ -83,7 +163,9 @@ int16_t PhysicalLayer::readData(String& str, size_t len) {
   // read the received data
   state = readData(data, length);
 
-  if(state == RADIOLIB_ERR_NONE) {
+  // any of the following leads to at least some data being available
+  // let's leave the decision of whether to keep it or not up to the user
+  if((state == RADIOLIB_ERR_NONE) || (state == RADIOLIB_ERR_CRC_MISMATCH) || (state == RADIOLIB_ERR_LORA_HEADER_DAMAGED)) {
     // add null terminator
     data[length] = 0;
 
@@ -99,53 +181,53 @@ int16_t PhysicalLayer::readData(String& str, size_t len) {
   return(state);
 }
 
-int16_t PhysicalLayer::receive(String& str, size_t len) {
-  int16_t state = RADIOLIB_ERR_NONE;
+int16_t PhysicalLayer::readData(uint8_t* data, size_t len) {
+  (void)data;
+  (void)len;
+  return(RADIOLIB_ERR_UNSUPPORTED);
+}
 
-  // user can override the length of data to read
-  size_t length = len;
+int16_t PhysicalLayer::transmitDirect(uint32_t frf) {
+  (void)frf;
+  return(RADIOLIB_ERR_UNSUPPORTED);
+}
 
-  // build a temporary buffer
-  #if defined(RADIOLIB_STATIC_ONLY)
-    uint8_t data[RADIOLIB_STATIC_ARRAY_SIZE + 1];
-  #else
-    uint8_t* data = NULL;
-    if(length == 0) {
-      data = new uint8_t[_maxPacketLength + 1];
-    } else {
-      data = new uint8_t[length + 1];
-    }
-    if(!data) {
-      return(RADIOLIB_ERR_MEMORY_ALLOCATION_FAILED);
-    }
-  #endif
+int16_t PhysicalLayer::receiveDirect() {
+  return(RADIOLIB_ERR_UNSUPPORTED);
+}
 
-  // attempt packet reception
-  state = receive(data, length);
+int16_t PhysicalLayer::setFrequency(float freq) {
+  (void)freq;
+  return(RADIOLIB_ERR_UNSUPPORTED);
+}
 
-  if(state == RADIOLIB_ERR_NONE) {
-    // read the number of actually received bytes (for unknown packets)
-    if(len == 0) {
-      length = getPacketLength(false);
-    }
+int16_t PhysicalLayer::setBitRate(float br) {
+  (void)br;
+  return(RADIOLIB_ERR_UNSUPPORTED);
+}
 
-    // add null terminator
-    data[length] = 0;
+int16_t PhysicalLayer::setFrequencyDeviation(float freqDev) {
+  (void)freqDev;
+  return(RADIOLIB_ERR_UNSUPPORTED);
+}
 
-    // initialize Arduino String class
-    str = String((char*)data);
-  }
+int16_t PhysicalLayer::setDataShaping(uint8_t sh) {
+  (void)sh;
+  return(RADIOLIB_ERR_UNSUPPORTED);
+}
 
-  // deallocate temporary buffer
-  #if !defined(RADIOLIB_STATIC_ONLY)
-    delete[] data;
-  #endif
-
-  return(state);
+int16_t PhysicalLayer::setEncoding(uint8_t encoding) {
+  (void)encoding;
+  return(RADIOLIB_ERR_UNSUPPORTED);
 }
 
 float PhysicalLayer::getFreqStep() const {
   return(_freqStep);
+}
+
+size_t PhysicalLayer::getPacketLength(bool update) {
+  (void)update;
+  return(0);
 }
 
 int32_t PhysicalLayer::random(int32_t max) {
@@ -176,6 +258,10 @@ int32_t PhysicalLayer::random(int32_t min, int32_t max) {
   return(PhysicalLayer::random(max - min) + min);
 }
 
+uint8_t PhysicalLayer::randomByte() {
+  return(0);
+}
+
 int16_t PhysicalLayer::startDirect() {
   // disable encodings
   int16_t state = setEncoding(RADIOLIB_ENCODING_NRZ);
@@ -195,10 +281,16 @@ int16_t PhysicalLayer::available() {
   return(_bufferWritePos);
 }
 
-uint8_t PhysicalLayer::read() {
+void PhysicalLayer::dropSync() {
   if(_directSyncWordLen > 0) {
     _gotSync = false;
     _syncBuffer = 0;
+  }
+}
+
+uint8_t PhysicalLayer::read(bool drop) {
+  if(drop) {
+    dropSync();
   }
   _bufferWritePos--;
   return(_buffer[_bufferReadPos++]);
@@ -225,6 +317,10 @@ void PhysicalLayer::updateDirectBuffer(uint8_t bit) {
   if(!_gotSync) {
     _syncBuffer <<= 1;
     _syncBuffer |= bit;
+
+    RADIOLIB_VERBOSE_PRINT("S\t");
+    RADIOLIB_VERBOSE_PRINTLN(_syncBuffer, HEX);
+
     if((_syncBuffer & _directSyncWordMask) == _directSyncWord) {
       _gotSync = true;
       _bufferWritePos = 0;
@@ -244,11 +340,23 @@ void PhysicalLayer::updateDirectBuffer(uint8_t bit) {
     // check complete byte
     if(_bufferBitPos == 8) {
       _buffer[_bufferWritePos] = Module::flipBits(_buffer[_bufferWritePos]);
+      RADIOLIB_VERBOSE_PRINT("R\t");
+      RADIOLIB_VERBOSE_PRINTLN(_buffer[_bufferWritePos], HEX);
+
       _bufferWritePos++;
       _bufferBitPos = 0;
     }
   }
 }
+
+void PhysicalLayer::setDirectAction(void (*func)(void)) {
+  (void)func;
+}
+
+void PhysicalLayer::readBit(RADIOLIB_PIN_TYPE pin) {
+  (void)pin;
+}
+
 #endif
 
 int16_t PhysicalLayer::setDIOMapping(RADIOLIB_PIN_TYPE pin, uint8_t value) {
@@ -256,3 +364,15 @@ int16_t PhysicalLayer::setDIOMapping(RADIOLIB_PIN_TYPE pin, uint8_t value) {
   (void)value;
   return(RADIOLIB_ERR_UNSUPPORTED);
 }
+
+#if defined(RADIOLIB_INTERRUPT_TIMING)
+void PhysicalLayer::setInterruptSetup(void (*func)(uint32_t)) {
+  Module* mod = getMod();
+  mod->TimerSetupCb = func;
+}
+
+void PhysicalLayer::setTimerFlag() {
+  Module* mod = getMod();
+  mod->TimerFlag = true;
+}
+#endif

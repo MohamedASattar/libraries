@@ -64,6 +64,31 @@
 */
 
 /*!
+  \defgroup config_standby Standby mode type aliases.
+
+  \{
+*/
+
+/*!
+  \brief Default standby used by the module
+*/
+#define RADIOLIB_STANDBY_DEFAULT                                (0x00)
+
+/*!
+  \brief Warm standby (e.g. crystal left running).
+*/
+#define RADIOLIB_STANDBY_WARM                                   (0x01)
+
+/*!
+  \brief Cold standby (e.g. only internal RC oscillator running).
+*/
+#define RADIOLIB_STANDBY_COLD                                   (0x02)
+
+/*!
+  \}
+*/
+
+/*!
   \defgroup status_codes Status Codes
 
   \{
@@ -218,6 +243,11 @@
 */
 #define RADIOLIB_ERR_INVALID_RSSI_THRESHOLD                    (-27)
 
+/*!
+  \brief A `NULL` pointer has been encountered. If you see this, there may be a potential security vulnerability.
+*/
+#define RADIOLIB_ERR_NULL_POINTER                              (-28)
+
 // RF69-specific status codes
 
 /*!
@@ -357,6 +387,11 @@
 
 /*!
   \brief SX126x failed to execute SPI command.
+  Often this means that the module is trying to use TCXO while
+  XTAL is connected (or vice versa). Make sure your crystal setup
+  (e.g. TCXO reference voltage) matches your hardware by setting
+  "tcxoVoltage" to 0 when using XTAL module, or to appropriate value
+  when using TCXO module.
 */
 #define RADIOLIB_ERR_SPI_CMD_FAILED                            (-707)
 
